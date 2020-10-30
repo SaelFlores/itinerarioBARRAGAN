@@ -1,0 +1,1554 @@
+/* Desarrollado por Hugo Sael Flores Velazquez sael.floresv@gmail.com */
+@font-face{
+    font-family: roboto-mono;
+    src: url('../fonts/RobotoMono-Regular.ttf') format('truetype');
+}
+@font-face{
+    font-family: roboto-mono-light;
+    src: url('../fonts/RobotoMono-Light.ttf') format('truetype');
+}
+@font-face{
+    font-family: roboto-bold;
+    src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+}
+@font-face{
+    font-family: roboto-light;
+    src: url('../fonts/Roboto-Light.ttf') format('truetype');
+}
+@font-face{
+    font-family: inconsolata;
+    src: url('../fonts/Inconsolata-Light.ttf') format('truetype');
+}
+@font-face{
+    font-family: dm-mono;
+    src: url('../fonts/DMMono-Regular.ttf') format('truetype');
+}
+@font-face{
+    font-family: dm-mono-light;
+    src: url('../fonts/DMMono-Light.ttf') format('truetype');
+}
+
+/********General************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /* cursor: url('../images/cursores/flecha-verde.png'), auto; */
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+
+body{
+    background: white;
+}
+
+/********Styles of header************/
+#header-colectivo{
+    width: 100%;
+    height: 27px;
+    top: 0;
+    left: 0;
+    background: rgb(236, 97, 156);
+    position: fixed;
+}
+
+#header-colectivo span{
+    top: 0;
+    left: 30px;
+    transform: translate(0, -20%);
+}
+
+.colectivo-nav{
+    float: right;
+}
+
+.colectivo-nav li{
+    display: table-cell;
+}
+
+#colectivo {
+    font-size: 20px;
+    color: white;
+    padding-right: 30px;
+    transform: translate(0, -25%);
+    font-family: dm-mono; 
+}
+
+#logo-colectivo {
+    width: 27px;
+    height: 27px; 
+}
+
+/********Style of hamburguese span icon************/
+#header-colectivo span,
+#header-colectivo span:before,
+#header-colectivo span:after{
+    background: white;
+    display: block;
+    height: 3px;
+    position: absolute;
+    transition: all 300ms ease;
+}
+
+#header-colectivo span:before,
+#header-colectivo span:after{
+content: '';
+}
+
+#header-colectivo span{
+    top: 13px;
+    width: 25px;
+}
+
+#header-colectivo span:before{
+    left: 0px;
+    top: -7px;
+    width: 25px;
+}
+
+#header-colectivo span:after{
+    left: 0px;
+    top: 7px;
+    width: 25px;
+}
+
+#header-colectivo.close span{
+    top: 12px;
+    width: 20px;
+    background: rgb(145, 211, 240);
+}
+
+#header-colectivo.close span:before{
+    top: 0px;
+    transform: rotate(90deg);
+    width: 20px;
+    background: rgb(145, 211, 240);;
+}
+
+#header-colectivo.close span:after{
+    top: 0px;
+    left: 0px;
+    transform: rotate(90deg);
+    width: 20px;
+    opacity: 0;
+}
+
+
+/********Menu Principal************/
+#menu{
+    z-index: 20;
+    position: fixed;
+    width: 250px;
+    top: 50px;
+    left: 30px;
+    opacity: 1;
+    text-align: left;
+    visibility: visible;
+    transition: all 300ms ease;
+    background: white;
+}
+
+#menu.show{
+    opacity: 0;
+    top: 0px;
+    left: 0px;
+    visibility: hidden;
+}
+
+#menu li{
+    list-style: none;
+    position: relative;
+    display: flex;
+}
+
+#menu-inicio{
+    font-family: dm-mono;
+    font-size: 17px;
+    width: 100%;
+    color: black;
+}
+
+.text-menu-inicio{
+    width: 90%;
+    color:black;
+    font-family: inconsolata;
+    font-size: 17px;
+    transition: all 300ms;
+    display: block;
+}
+
+#menu li:hover .text-menu-inicio{
+    letter-spacing: 1px;
+}
+
+#menu li:hover .flecha-rosa{
+    color: rgb(236, 97, 156);
+    visibility: visible;
+    opacity: 1;
+}
+
+.borde-menu{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;  
+}
+
+.estilo-rosa{
+    height: 48px;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-bottom-color: rgb(236, 97, 156);
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+}
+
+.flecha-rosa{
+    opacity: 0;
+    visibility: hidden;
+    width: 10%;
+    color: rgb(236, 97, 156);
+}
+
+#creditos-li{
+    height: 48px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+}
+
+/********Menu Conceptos************/
+#conceptos-menu{
+    z-index: 20;
+    width: 230px;
+    margin-left: 235px;
+    top: 146px;
+    position: fixed;
+    background: white;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#menu #li-conceptos:hover #conceptos-menu{
+    visibility: visible;
+    opacity: 1;
+}
+
+#conceptos-menu li{
+    list-style: none;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    display: flex;
+}
+
+#conceptos-menu li:hover .flecha-azul{
+    color: rgb(145, 211, 240);
+    visibility: visible;
+    opacity: 1;
+}
+
+.flecha-azul{
+    width: 10%;
+    color: rgb(145, 211, 240);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.estilo-azul{
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-bottom-color: rgb(145, 211, 240);
+}
+
+.text-menus{
+    width: 90%;
+    color:black;
+    font-family: inconsolata;
+    font-size: 15px;
+    transition: all 300ms;
+    display: block;
+} /*general menus*/
+
+.text-menus:hover{
+    letter-spacing: 1px;
+}/*general menus*/
+
+/********Menu Inspiraciones************/
+#inspiraciones-menu{
+    z-index: 20;
+    width: 230px;
+    margin-left: 235px;
+    top: 194px;
+    position: fixed;
+    background: white;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#menu #li-inspiraciones:hover #inspiraciones-menu{
+    visibility: visible;
+    opacity: 1;
+}
+
+#inspiraciones-menu li{
+    list-style: none;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    display: flex;
+}
+
+#inspiraciones-menu li:hover .flecha-amarilla{
+    color: rgb(246, 225, 73);
+    visibility: visible;
+    opacity: 1;
+}
+
+.flecha-amarilla{
+    width: 10%;
+    color: rgb(246, 225, 73);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.estilo-amarillo{
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-bottom-color: rgb(246, 225, 73);
+}
+
+/********Menu Planos************/
+#planos-menu{
+    z-index: 20;
+    width: 230px;
+    margin-left: 235px;
+    top: 194px;
+    position: fixed;
+    background: white;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#menu #li-planos:hover #planos-menu{
+    visibility: visible;
+    opacity: 1;
+}
+
+#planos-menu li{
+    list-style: none;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    display: flex;
+}
+
+#planos-menu li:hover .flecha-verde{
+    color: rgb(114, 241, 89);
+    visibility: visible;
+    opacity: 1;
+}
+
+.flecha-verde{
+    width: 10%;
+    color: rgb(114, 241, 89);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.estilo-verde{
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-bottom-color: rgb(114, 241, 89);
+}
+
+/********Menu Biografias************/
+#bios-menu{
+    z-index: 20;
+    width: 230px;
+    margin-left: 235px;
+    top: 194px;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    background: white;
+}
+
+#menu #li-biografias:hover #bios-menu{
+    visibility: visible;
+    opacity: 1;
+}
+
+#bios-menu li{
+    list-style: none;
+    padding-top: 5px;
+    padding-left: 10px;
+    display: flex;
+}
+
+#bios-menu li:hover .flecha-naranja{
+    color: rgb(241, 132, 72);
+    visibility: visible;
+    opacity: 1;
+}
+
+.flecha-naranja{
+    width: 10%;
+    color: rgb(241, 132, 72);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.estilo-naranja{
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-bottom-color: rgb(241, 132, 72);
+}
+
+/********Articles Conceptos************/
+.article-concepto{
+    width: 270px;
+    height: 440px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    display: none;
+    background: white;
+}
+
+.close-concepto a{
+    width: 20%;
+    height: auto;
+    float: right;
+    margin-right: 10px;
+    text-align: right;
+    color: black; 
+    font-size: 11px;
+}
+.close-concepto a:hover{
+    cursor: pointer;
+}
+
+.nombre-concepto{
+    padding-top: 15px;
+}
+.nombre-concepto h1{
+    padding-top: 5px;
+    text-align: center;
+    font-family: dm-mono-light;
+    font-size: 18px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+}
+
+.foto-concepto img{
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.body-concepto{
+    height: 23%;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.body-concepto p{
+    text-align: justify;
+    font-family: inconsolata;
+    color: black;
+    font-size: 13px;
+}
+
+.footer-concepto{
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+}
+
+.footer-concepto p{
+    float: right;
+    padding-top: 2px;
+    font-family: roboto-bold;
+    font-size: 10px;
+    color: black;
+}
+
+/********Open and Position Conceptos articles************/
+#draggable-arquitectura{
+    z-index: 5;
+    width: auto;
+    height: auto;
+    left: 40%;
+    top: 100px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+
+#draggable-diseno{
+    z-index: 5;
+    width: auto;
+    height: auto;
+    left: 42%;
+    top: 100px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+
+#draggable-paisajismo{
+    z-index: 5;
+    width: auto;
+    height: auto;
+    left: 44%;
+    top: 100px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+
+#draggable-urbanismo{
+    z-index: 5;
+    width: auto;
+    height: auto;
+    left: 46%;
+    top: 100px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+
+/********Articles Inspiraciones************/
+.article-inspiracion{
+    width: 270px;
+    height: 440px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    display: none;
+    background: white;
+}
+
+.close-inspiracion a{
+    width: 20%;
+    float: right;
+    margin-right: 10px;
+    text-align: right;
+    color: black; 
+    font-size: 11px;
+}
+.close-inspiracion a:hover{
+    cursor: pointer;
+}
+
+.foto-inspiracion{
+    height: 280px;
+}
+.foto-inspiracion img{
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+}
+
+.nombre-inspiracion h1{
+    padding-left: 10px;
+    margin-bottom: 5px;
+    font-family: dm-mono-light;
+    font-size: 18px;
+}
+
+.body-inspiracion{
+    height: 23%;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.body-inspiracion p{
+    text-align: justify;
+    font-family: inconsolata;
+    color: black;
+    font-size: 13px;
+}
+
+.footer-inspiracion{
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+}
+
+.footer-inspiracion p{
+    float: right;
+    padding-top: 2px;
+    font-family: roboto-bold;
+    font-size: 10px;
+    color: black;
+}
+/********Open and Position Inspiraciones articles************/
+#draggable-jalisco{
+    z-index: 5;
+    width: auto;
+    height: auto;
+    left: 50%;
+    top: 150px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-michoacan{
+    z-index: 5;
+    width: auto;
+    height: auto;
+    left: 52%;
+    top: 150px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-marruecos{
+    z-index: 5;
+    width: auto;
+    height: auto;
+    left: 54%;
+    top: 150px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-alhambra{
+    z-index: 5;
+    width: auto;
+    height: auto;
+    left: 56%;
+    top: 150px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-gimignano{
+    z-index: 5;
+    width: auto;
+    height: auto;
+    left: 58%;
+    top: 150px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-paris{
+    z-index: 5;
+    width: auto;
+    height: auto;
+    left: 60%;
+    top: 150px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-ny{
+    z-index: 5;
+    width: auto;
+    height: auto;
+    left: 62%;
+    top: 150px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+
+
+/********Articles Biografias************/
+.article-personaje{
+    width: 270px;
+    height: 440px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    display: none;
+    background: white;
+}
+
+.close-personaje a{
+    width: 20%;
+    float: right;
+    margin-right: 10px;
+    text-align: right;
+    color: black; 
+    font-size: 11px;
+}
+.close-personaje a:hover{
+    cursor: pointer;
+}
+
+.foto-personaje{
+    height: 280px;
+}
+.foto-personaje img{
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+}
+
+.botones{
+    font-size: 15px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    color: rgb(246, 225, 73);
+}
+.botones:hover{
+    cursor: pointer;
+    transform: scale(1.5);
+}
+.atras{
+    left: 5%;
+    top: calc(30%);
+}
+.adelante{
+    right: 5%;
+    top: calc(30%);
+}
+
+.nombre-personaje h1{
+    padding-left: 10px;
+    margin-bottom: 5px;
+    font-family: dm-mono-light;
+    font-size: 18px;
+}
+
+.body-personaje{
+    height: 23%;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.body-personaje p{
+    text-align: justify;
+    font-family: inconsolata;
+    color: black;
+    font-size: 13px;
+}
+
+.footer-personaje{
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+}
+
+.footer-personaje p{
+    float: right;
+    padding-top: 2px;
+    font-family: roboto-bold;
+    font-size: 10px;
+    color: black;
+}
+
+/********Open and Position Biografias articles************/
+#draggable-barragan{
+    z-index: 15;
+    width: auto;
+    height: auto;
+    left: 45%;
+    top: 50px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+
+#draggable-bac{
+    z-index: 5;
+    width: auto;
+    height: auto;
+    left: 30%;
+    top: 50px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+
+#draggable-dratl{
+    z-index: 5;
+    width: auto;
+    height: auto;
+    left: 32%;
+    top: 50px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+
+#draggable-chucho{
+    z-index: 5;
+    width: auto;
+    height: auto;
+    left: 34%;
+    top: 50px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+
+#draggable-orozco{
+    z-index: 5;
+    width: auto;
+    height: auto;
+    left: 36%;
+    top: 50px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+
+#draggable-diego{
+    z-index: 5;
+    width: auto;
+    height: auto;
+    left: 38%;
+    top: 50px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+
+#draggable-lecorbusier{
+    z-index: 5;
+    width: auto;
+    height: auto;
+    left: 40%;
+    top: 50px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+
+#draggable-albers{
+    z-index: 5;
+    width: auto;
+    height: auto;
+    left: 42%;
+    top: 50px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+
+#draggable-clara{
+    z-index: 5;
+    width: auto;
+    height: auto;
+    left: 44%;
+    top: 50px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+
+#draggable-cetto{
+    z-index: 5;
+    width: auto;
+    height: auto;
+    left: 46%;
+    top: 50px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+
+#draggable-ogorman{
+    z-index: 5;
+    width: auto;
+    height: auto;
+    left: 48%;
+    top: 50px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+
+#draggable-pani{
+    z-index: 5;
+    width: auto;
+    height: auto;
+    left: 50%;
+    top: 50px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+
+#draggable-goeritz{
+    z-index: 5;
+    width: auto;
+    height: auto;
+    left: 52%;
+    top: 50px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+
+#draggable-emilio{
+    z-index: 5;
+    width: auto;
+    height: auto;
+    left: 54%;
+    top: 50px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+
+#draggable-schjetnan{
+    z-index: 5;
+    width: auto;
+    height: auto;
+    left: 56%;
+    top: 50px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+
+/********Articles Planos************/
+.article-plano{
+    width: 630px;
+    height: 535px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    display: none;
+    background: white;
+}
+
+.close-plano a{
+    width: 20%;
+    height: auto;
+    float: right;
+    margin-right: 10px;
+    text-align: right;
+    color: black; 
+    font-size: 11px;
+}
+.close-plano a:hover{
+    cursor: pointer;
+}
+
+.foto-plano{
+    width: 100%;
+    display: flex;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+}
+
+.foto-plano img{
+    width: 79%;
+    display: block;
+    margin: auto;
+    /*border-style: solid;
+    border-width: 1px;
+    border-color: black;*/
+}
+
+.botones-plano{
+    width: 5%;
+    line-height: 500px;
+    color: rgb(94, 94, 94);
+    text-align: center;
+}
+.botones-plano:hover{
+    cursor: pointer;
+    letter-spacing: 4px;
+    color: rgb(236, 97, 156);
+}
+
+.footer-plano{
+    /*margin-top: 5px;*/
+    margin-right: 10px;
+    margin-left: 10px;
+    /*border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;*/
+}
+
+.footer-plano p{
+    text-align: right;
+    font-family: dm-mono;
+    font-size: 13px;
+    color: black;
+}
+/********Articles Planos 360************/
+.article-plano360{
+    width: auto;
+    height: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    /*display: none;*/
+    background: white;
+}
+
+.foto-plano360{
+    width: 100%;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.img360{
+    width: 400px;
+    height: 300px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    /*border-style: solid;
+    border-width: 1px;
+    border-color: black;*/
+}
+#pantalla-completa{
+    margin-right: 20px;
+}
+/********Open and Position Planos and 360 articles************/
+#draggable-general{
+    z-index: 15;
+    width: auto;
+    height: auto;
+    left: 23%;
+    top: 30px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-zaguan{
+    z-index: 15;
+    width: auto;
+    height: auto;
+    left: 25%;
+    top: 30px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-vestibulo{
+    z-index: 15;
+    width: auto;
+    height: auto;
+    left: 27%;
+    top: 30px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-salas{
+    z-index: 15;
+    width: auto;
+    height: auto;
+    left: 29%;
+    top: 30px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-comedor{
+    z-index: 15;
+    width: auto;
+    height: auto;
+    left: 31%;
+    top: 30px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-cuartos{
+    z-index: 15;
+    width: auto;
+    height: auto;
+    left: 33%;
+    top: 30px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-terraza{
+    z-index: 15;
+    width: auto;
+    height: auto;
+    left: 35%;
+    top: 30px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-jardin{
+    z-index: 15;
+    width: auto;
+    height: auto;
+    left: 37%;
+    top: 30px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-ollas{
+    z-index: 15;
+    width: auto;
+    height: auto;
+    left: 39%;
+    top: 30px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-taller{
+    z-index: 15;
+    width: auto;
+    height: auto;
+    left: 41%;
+    top: 30px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#galeria360{/*Galeria 360*/
+    z-index: 15;
+    width: auto;
+    height: auto;
+    right: 2%;
+    top: 50px;
+    position: absolute;
+    /* margin-bottom: 28px; */
+} 
+
+/********Article Bibliografia Libros************/
+.article-bibliografia{
+    width: 800px;
+    height: 480px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    display: none;
+    background: white;
+}
+.foto-bibliografia{
+    width: 100%;
+    display: flex;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+}
+.foto-bibliografia img{
+    width: 90%;
+    height: 90%;
+    display: block;
+    /*border-style: solid;
+    border-width: 1px;
+    border-color: black;*/
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.botones-bibliografia{
+    width: 5%;
+    line-height: 420px;
+    color: rgb(94, 94, 94);
+    text-align: center;
+}
+.botones-bibliografia:hover{
+    cursor: pointer;
+    letter-spacing: 4px;
+    color: rgb(236, 97, 156);
+}
+/********Open and Position Bibliografia Libros article************/
+#draggable-bibliografia{
+    z-index: 15;
+    width: auto;
+    height: auto;
+    left: 23%;
+    top: 50px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+
+/********Article Creditos************/
+.article-creditos{
+    width: 700px;
+    height: 415px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    display: none;
+    background: white;
+}
+
+.close-creditos-article a{
+    width: 20%;
+    height: auto;
+    float: right;
+    margin-right: 10px;
+    text-align: right;
+    color: black; 
+    font-size: 11px;
+}
+.close-creditos-article a:hover{
+    cursor: pointer;
+}
+
+.body-creditos{
+    width: 100%;
+    display: flex;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+}
+
+.fotos-team{
+    width: 40%;
+    display: flex;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#team1, #team2{
+    display: flex;
+    flex-direction: column;
+}
+
+#team1 img, #team2 img{
+    width: 125px;
+    height: 125px;
+    padding: 5px;
+}
+
+.info-creditos{
+    width: 100%;
+    height: 90%;
+    overflow-y: auto;
+    padding: 15px;
+}
+
+.info-creditos a{
+    text-align: left;
+    font-family: dm-mono;
+    font-size: 17px;
+}
+
+.info-creditos p{
+    text-align: left;
+    font-family: inconsolata;
+    color: black;
+    padding-bottom: 5px;
+    font-size: 11px;
+    padding-top: 5px;
+    text-align: justify;
+}
+
+#nombres-creditos{
+    padding-top: 10px;
+    display: flex;
+}
+
+.team-nombres{
+    margin: auto;
+}
+
+.team-nombres img{
+    width: 16px;
+    padding-top: 4px;
+}
+
+.team-nombres img:hover{
+    transform: scale(1.2);
+}
+
+.footer-creditos{
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    /*border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;*/
+}
+/********Open and Position Creditos article************/
+#draggable-creditos{
+    z-index: 15;
+    width: auto;
+    height: auto;
+    left: 23%;
+    top: 55px;
+    position: absolute;
+    margin-bottom: 28px;
+}
+
+
+/********Articles Timeline************/
+.article-decada{
+    width: 270px;
+    height: 320px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    display: none;
+    background: white;
+}
+
+.close-decada a{
+    width: 20%;
+    height: auto;
+    float: right;
+    margin-right: 10px;
+    text-align: right;
+    color: black; 
+    font-size: 11px;
+}
+.close-decada a:hover{
+    cursor: pointer;
+}
+
+.titulo-decada{
+    padding-top: 15px;
+}
+.titulo-decada h1{
+    padding-top: 5px;
+    padding-left: 20px;
+    text-align: left;
+    font-family: roboto-mono-light;
+    font-size: 20px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+}
+
+.body-decada{
+    height: 70%;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.body-decada a{
+    font-weight: bold;
+}
+
+.body-decada p{
+    text-align: justify;
+    font-family: inconsolata;
+    color: black;
+    font-size: 13px;
+}
+
+.footer-decada{
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    /*border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;*/
+}
+
+.footer-decada p{
+    text-align: center;
+    padding-top: 2px;
+    font-family: roboto-bold;
+    font-size: 10px;
+    color: black;
+}
+/********Open and Position Timeline Decadas articles************/
+#draggable-1900{
+    z-index: 15;
+    width: auto;
+    height: auto;
+    left: 1%;
+    top: 40%;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-1910{
+    z-index: 15;
+    width: auto;
+    height: auto;
+    left: 3%;
+    top: 40%;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-1920{
+    z-index: 15;
+    width: auto;
+    height: auto;
+    left: 11%;
+    top: 40%;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-1930{
+    z-index: 15;
+    width: auto;
+    height: auto;
+    left: 19%;
+    top: 40%;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-1940{
+    z-index: 15;
+    width: auto;
+    height: auto;
+    left: 28%;
+    top: 40%;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-1950{
+    z-index: 15;
+    width: auto;
+    height: auto;
+    left: 36%;
+    top: 40%;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-1960{
+    z-index: 15;
+    width: auto;
+    height: auto;
+    left: 44%;
+    top: 40%;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-1970{
+    z-index: 15;
+    width: auto;
+    height: auto;
+    left: 52%;
+    top: 40%;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-1980{
+    z-index: 15;
+    width: auto;
+    height: auto;
+    left: 60%;
+    top: 40%;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-1990{
+    z-index: 15;
+    width: auto;
+    height: auto;
+    left: 68%;
+    top: 40%;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-2000{
+    z-index: 15;
+    width: auto;
+    height: auto;
+    left: 76%;
+    top: 40%;
+    position: absolute;
+    margin-bottom: 28px;
+}
+#draggable-2010{
+    z-index: 15;
+    width: auto;
+    height: auto;
+    left: 79%;
+    top: 40%;
+    position: absolute;
+    margin-bottom: 28px;
+}
+
+/********Timeline************/
+#timeline{
+    width: 100%;
+    height: auto;
+    bottom: 28px;
+    position: fixed;
+    text-align: center;
+}
+#timeline nav{
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-block;
+}
+#timeline li{
+    padding-left: 9px;
+    padding-right: 9px;
+    list-style: none;
+    display: table-cell;
+    text-align: center;
+}
+.decada{
+    font-size: 30px;
+    color: rgb(94, 94, 94);
+    font-family: dm-mono-light;
+    transition: all 300ms ease;
+}
+.decada:hover{
+    cursor: pointer;
+    /* letter-spacing: 2px; */
+    color: rgb(236, 97, 156);
+}
+.punto{
+    color: rgb(94, 94, 94);
+    font-size: 10px;
+    vertical-align: middle;
+}
+
+/********Style of intro************/
+#intro{
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(253, 234, 223);
+    z-index: 25;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#intro img{
+    width: 80%;
+    height: 80%;
+}
+
+#close-intro{
+    top: 0;
+    color: rgb(236, 97, 156);
+    font-size: 20px;
+    font-family: roboto-mono;
+    transition: all 300ms;
+}
+
+#close-intro:hover{
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+/*#intro.close {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 900ms ease;
+}*/
+
+
+/********Style of footer************/
+#footer-main{
+    width: 100%;
+    height: 27px;
+    bottom: 0;
+    left: 0;
+    background: rgb(246, 225, 73);
+    position: fixed;
+}
+#copyrights{
+    /* font-size: 15px; */
+    margin-left: 1%;
+    transform: translate(0, 25%);
+    font-family: inconsolata;
+    float: left;
+}

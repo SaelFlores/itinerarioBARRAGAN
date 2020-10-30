@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<!-- Desarrollado por Hugo Sael Flores Velazquez sael.floresv@gmail.com -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>itinerarioBARRAG&Aacute;N</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link  rel="icon"   href="images/personajes/barragan/barragan.png" type="image/png" />
+    <!--Responsive interface-->
+    <meta name="viewport" content="width=device-width, user-scalable=no,
+    initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--AFrame para imagenes 360°-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
+    <!--Mostrar y ocultar-->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+    <!--JQuery UI-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("[id^=draggable]").draggable();
+        });
+    </script>
+</head>
+
+<body>
+    <!-------------------------Header------------------------------------------------>
+    <header id="header-colectivo">
+        <span></span>
+        <nav class="colectivo-nav">
+            <ul>
+                <li>
+                    <p id="colectivo">itinerarioBARRAG&Aacute;N</p>
+                </li>
+                <li>
+                    <img src="images/personajes/barragan/barragan.png" id="logo-colectivo"/>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-------------------------Menu------------------------------------------------>
+    <div id="menu" class="borde-menu">
+        <ul>
+            <li class="estilo-rosa"><a id="menu-inicio">Inicio</a></li>
+            <li id="barragan" class="estilo-rosa"><a class="text-menu-inicio">Luis Barrag&aacute;n</a><a class="flecha-rosa">&#x25b6;</a></li>
+            <li id="li-conceptos" class="estilo-rosa"><a class="text-menu-inicio">Conceptos</a><a class="flecha-rosa">&#x25b6;</a>
+                <div id="conceptos-menu" class="borde-menu">
+                    <ul>
+                        <li id="open-arquitectura" class="estilo-azul"><a class="text-menus">Arquitectura</a><a class="flecha-azul">&#x25b6;</a></li>
+                        <li id="open-diseno" class="estilo-azul"><a class="text-menus">Dise&ntilde;o Industrial</a><a class="flecha-azul">&#x25b6;</a></li>
+                        <li id="open-paisajismo" class="estilo-azul"><a class="text-menus">Paisajismo</a><a class="flecha-azul">&#x25b6;</a></li>
+                        <li id="open-urbanismo"><a class="text-menus">Urbanismo</a><a class="flecha-azul">&#x25b6;</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li id="li-inspiraciones" class="estilo-rosa"><a class="text-menu-inicio">Inspiraciones</a><a class="flecha-rosa">&#x25b6;</a>
+                <div id="inspiraciones-menu" class="borde-menu">
+                    <ul>
+                        <li id="open-jalisco" class="estilo-amarillo"><a class="text-menus">Jalisco</a><a class="flecha-amarilla">&#x25b6;</a></li>
+                        <li id="open-michoacan" class="estilo-amarillo"><a class="text-menus">Michoac&aacute;n</a><a class="flecha-amarilla">&#x25b6;</a></li>
+                        <li id="open-marruecos" class="estilo-amarillo"><a class="text-menus">Marruecos</a><a class="flecha-amarilla">&#x25b6;</a></li>
+                        <li id="open-alhambra" class="estilo-amarillo"><a class="text-menus">La Alhambra</a><a class="flecha-amarilla">&#x25b6;</a></li>
+                        <li id="open-gimignano" class="estilo-amarillo"><a class="text-menus">San Gimignano</a><a class="flecha-amarilla">&#x25b6;</a></li>
+                        <li id="open-paris" class="estilo-amarillo"><a class="text-menus">Par&iacute;s</a><a class="flecha-amarilla">&#x25b6;</a></li>
+                        <li id="open-ny"><a class="text-menus">Nueva York</a><a class="flecha-amarilla">&#x25b6;</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li id="li-biografias" class="estilo-rosa"><a class="text-menu-inicio">Personajes</a><a class="flecha-rosa">&#x25b6;</a>
+                <div id="bios-menu" class="borde-menu">
+                    <ul>
+                        <li id="bac" class="estilo-naranja"><a class="text-menus">Ferdinand Bac</a><a class="flecha-naranja">&#x25b6;</a></li>
+                        <li id="dratl" class="estilo-naranja"><a class="text-menus">Gerardo Murillo</a><a class="flecha-naranja">&#x25b6;</a></li>
+                        <li id="chucho" class="estilo-naranja"><a class="text-menus">Jes&uacute;s Reyes Ferreira</a><a class="flecha-naranja">&#x25b6;</a></li>
+                        <li id="orozco" class="estilo-naranja"><a class="text-menus">José Clemente Orozco</a><a class="flecha-naranja">&#x25b6;</a></li>
+                        <li id="diego" class="estilo-naranja"><a class="text-menus">Diego Rivera</a><a class="flecha-naranja">&#x25b6;</a></li>
+                        <li id="lecorbusier" class="estilo-naranja"><a class="text-menus">Le Corbusier</a><a class="flecha-naranja">&#x25b6;</a></li>    
+                        <li id="albers" class="estilo-naranja"><a class="text-menus">Josef Albers</a><a class="flecha-naranja">&#x25b6;</a></li>
+                        <li id="clara" class="estilo-naranja"><a class="text-menus">Clara Porset</a><a class="flecha-naranja">&#x25b6;</a></li>
+                        <li id="cetto" class="estilo-naranja"><a class="text-menus">Max Cetto</a><a class="flecha-naranja">&#x25b6;</a></li>
+                        <li id="ogorman" class="estilo-naranja"><a class="text-menus">Juan O&#8216; Gorman</a><a class="flecha-naranja">&#x25b6;</a></li>
+                        <li id="pani" class="estilo-naranja"><a class="text-menus">Mario Pani</a><a class="flecha-naranja">&#x25b6;</a></li>
+                        <li id="goeritz" class="estilo-naranja"><a class="text-menus">Mathias Goeritz</a><a class="flecha-naranja">&#x25b6;</a></li>
+                        <li id="emilio" class="estilo-naranja"><a class="text-menus">Emilio Ambasz</a><a class="flecha-naranja">&#x25b6;</a></li>
+                        <li id="schjetnan"><a class="text-menus">Mario Schjetnan</a><a class="flecha-naranja">&#x25b6;</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li id="li-planos" class="estilo-rosa"><a class="text-menu-inicio">Casa-Estudio</a><a class="flecha-rosa">&#x25b6;</a>
+                <div id="planos-menu" class="borde-menu">
+                    <ul>
+                        <li id="open-general" class="estilo-verde"><a class="text-menus">General</a><a class="flecha-verde">&#x25b6;</a></li>
+                        <li id="open-zaguan" class="estilo-verde"><a class="text-menus">Zaguán</a><a class="flecha-verde">&#x25b6;</a></li>
+                        <li id="open-vestibulo" class="estilo-verde"><a class="text-menus">Vest&iacute;bulo</a><a class="flecha-verde">&#x25b6;</a></li>
+                        <li id="open-salas" class="estilo-verde"><a class="text-menus">Salas</a><a class="flecha-verde">&#x25b6;</a></li>
+                        <li id="open-comedor" class="estilo-verde"><a class="text-menus">Comedor</a><a class="flecha-verde">&#x25b6;</a></li>
+                        <li id="open-cuartos" class="estilo-verde"><a class="text-menus">Cuartos</a><a class="flecha-verde">&#x25b6;</a></li>
+                        <li id="open-terraza" class="estilo-verde"><a class="text-menus">Terraza</a><a class="flecha-verde">&#x25b6;</a></li>
+                        <li id="open-jardin" class="estilo-verde"><a class="text-menus">Jard&iacute;n</a><a class="flecha-verde">&#x25b6;</a></li>
+                        <li id="open-ollas" class="estilo-verde"><a class="text-menus">Patio de las Ollas</a><a class="flecha-verde">&#x25b6;</a></li>
+                        <li id="open-taller"><a class="text-menus">Taller</a><a class="flecha-verde">&#x25b6;</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li id="open-bibliografia" class="estilo-rosa"><a class="text-menu-inicio">Bibliograf&iacute;a</a><a class="flecha-rosa">&#x25b6;</a></li>
+            <li id="creditos-li"><a class="text-menu-inicio">Acerca de</a><a class="flecha-rosa">&#x25b6;</a></li>
+        </ul>
+    </div>
+    
+    <!-------------------------Articles Conceptos------------------------------------------------>
+    <div id="draggable-arquitectura" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="arquitectura" class="article-concepto">
+            <section class="close-concepto">
+                <a id="close-arquitectura">&#x2715;</a>
+            </section>
+            <section class="nombre-concepto">
+                <h1>ARQUITECTURA</h1>
+            </section>
+            <section class="foto-concepto">
+                <img src="images/simbolos/arquitectura.jpg" alt="">
+            </section>
+            <section class="body-concepto">
+                <p>Luis Barragán es uno de los arquitectos más importantes e influyentes de la modernidad mexicana. Su arquitectura se decanta por un estilo personal, pero de carácter universal. Es decir, como él mismo afirmó; su arquitectura es una obra autobiográfica, en la cual, se sintetizan de manera moderna sus memorias e impresiones de juventud, sus viajes, influencias de maestros y amigos; así como, elementos tradicionales y vernáculos con corrientes filosóficas y artísticas de todos los tiempos. Dichos elementos permiten imprimir atemporalidad y emoción a la obra de este arquitecto.</p>
+            </section>
+            <section class="footer-concepto">
+                <p></p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-diseno" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="diseno" class="article-concepto">
+            <section class="close-concepto">
+                <a id="close-diseno">&#x2715;</a>
+            </section>
+            <section class="nombre-concepto">
+                <h1>DISE&Ntilde;O INDUSTRIAL</h1>
+            </section>
+            <section class="foto-concepto">
+                <img src="images/simbolos/diseno-industrial.jpg" alt="">
+            </section>
+            <section class="body-concepto">
+                <p>A Luis Barragán lo distingue su concepción de la arquitectura. Sintetizó de una forma poética sus vivencias y con una audaz percepción construyó espacios en los que cada elemento está pensado en función de cómo lo vive una persona siempre en movimiento. En la búsqueda de unidades completas, Barragán no solo se limitaba a concebir la arquitectura, sino diseñaba también los muebles y los más pequeños detalles de sus obras como una sola práctica.</p>
+                <p>Barragán denota una fuerte inspiración en los elementos vernáculos de México, aunado a colaboraciones con personajes importantes del diseño como Clara Porset, permitiendo que, Luis Barragán lograra una armonía excepcional tanto en interiores como en exteriores. En todas sus obras y en cada detalle está presente su obsesión por la belleza.</p>
+            </section>
+            <section class="footer-concepto">
+                <p></p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-paisajismo" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="paisajismo" class="article-concepto">
+            <section class="close-concepto">
+                <a id="close-paisajismo">&#x2715;</a>
+            </section>
+            <section class="nombre-concepto">
+                <h1>PAISAJISMO</h1>
+            </section>
+            <section class="foto-concepto">
+                <img src="images/simbolos/paisajismo.jpg" alt="">
+            </section>
+            <section class="body-concepto">
+                <p>Desde una etapa temprana Barragán tuvo un acercamiento al mundo del paisaje, primero con los libros Les Colombières y Jardins Enchantés, ambos escritos e ilustrados por el arquitecto francés Ferdinand Bac. Más adelante visitaría la Alhambra, en este sitio Barragán se cautivó por la belleza de los jardines del Generalife y el Patio de los Leones. </p>
+                <p>En su etapa de madurez, Barragán tras abandonar el “internacionalismo”, lo primero que hizo fue el fraccionamiento Jardines del Pedregal de San Ángel. Compró un enigmático y seductor terreno cubierto de lava, pero también completamente inhóspito. 
+                    El fraccionamiento resultó una verdadera innovación como arquitectura de paisaje. Barragán diseñó sus calles y proyectó la plaza del acceso incorporándola entre las piedras. En los “jardines tipo” mantuvo la presencia de la lava al colocar sólo lo indispensable para dar al sitio un aire habitable y enunció reglas, que indicaban el porcentaje de espacios abiertos que se debían dejar en todas las casas.
+                    </p>
+                <p>El 18 de agosto de 1972 se funda la Sociedad de Arquitectos Paisajistas de México, A.C. con los arquitectos Carlos Contreras Pagés, Jesús Salvador Pozada Barnard, Gerardo Ibarra Gómez, Alfonso Quiles Gómez, Roberto Rubio Culebro, Eliseo Arredondo González, Alfonso Muray Kobory, Carlos Bernal Salinas, Mario Schjetnan Garduño, Esperanza María Salum y se designa a Luis Barragán como presidente honorario vitalicio.</p>
+            </section>
+            <section class="footer-concepto">
+                <p></p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-urbanismo" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="urbanismo" class="article-concepto">
+            <section class="close-concepto">
+                <a id="close-urbanismo">&#x2715;</a>
+            </section>
+            <section class="nombre-concepto">
+                <h1>URBANISMO</h1>
+            </section>
+            <section class="foto-concepto">
+                <img src="images/simbolos/urbanismo.jpg" alt="">
+            </section>
+            <section class="body-concepto">
+                <p>Luis Barragán dio sus primeros pasos en el urbanismo en 1934 con el Parque Revolución en Guadalajara; sin embargo, el diseño urbano constituyó un aspecto fundamental en la etapa de su madurez. </p>
+                <p>En la primera mitad del siglo XX, el sur de la Ciudad de México experimentaba un crecimiento exponencial, la zona del Pedregal de San Ángel no era la excepción. En 1944 Luis Barragán realizó ensayos para la propuesta urbana de El Pedregal y en 1949 el pintor y muralista Diego Rivera escribe un texto llamado Requisitos Para la Organización de El Pedregal, dicho tratado enumera premisas para su conservación y habitabilidad.</p>
+                <p>Años más tarde como encomienda del arquitecto Mario Pani a Barragán y en colaboración con el artista alemán Mathias Goeritz crearon Las Torres de Ciudad Satélite, realizadas en 1957 como un hito que da la bienvenida a una nueva zona de la ciudad. No había en ese momento, ninguna obra de esa naturaleza en México.  Las Torres tienen la escala justa para ser miradas desde perspectivas siempre en movimiento. </p>
+                <p>Asimismo, en las afueras de la ciudad de México Barragán proyectó también varios fraccionamientos como Las Arboledas o Los Clubes, procurando siempre que el entorno se confunda con la arquitectura al integrar y respetar la naturaleza. </p>
+            </section>
+            <section class="footer-concepto">
+                <p></p>
+            </section>
+        </article>
+    </div>
+
+    <!-------------------------Article Acerca de Barragan------------------------------------------------>
+    <div id="draggable-barragan" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="luis-barragan" class="article-personaje">
+            <section class="close-personaje">
+                <a id="close-barragan">&#x2715;</a>
+            </section>
+            <section class="foto-personaje">
+                <div class="atras botones">&#60;</div>
+                <div class="adelante botones">&#62;</div>
+                <img src="images/personajes/barragan/barragan.png" alt="">
+            </section>
+            <section class="nombre-personaje">
+                <h1>Luis Ramiro Barrag&aacute;n</h1>
+            </section>
+            <section class="body-personaje">
+                <p>Es el arquitecto mexicano más importante del Siglo XX y único ganador del Premio Pritzker (1980). Su formación académica fue en el ramo de la Ingeniería Civil y se consideró a sí mismo un arquitecto autodidacta. A partir de las diversas influencias que tuvo a lo largo de su vida, la obra construida se divide en tres etapas: regionalista, funcionalista y arquitectura emocional; siendo este último  período el más conocido. Su Casa construida en 1947 (Patrimonio Mundial UNESCO 2004) es una obra maestra dentro del desarrollo del movimiento moderno, que integra en una nueva síntesis elementos tradicionales y vernáculos, así como, diversas corrientes filosóficas y artísticas de todos los tiempos.</p>
+            </section>
+            <section class="footer-personaje">
+                <p>Jalisco 1902 - CDMX 1988</p>
+            </section>
+        </article>
+    </div>
+    
+    <!-------------------------Articles Inspiraciones------------------------------------------------>
+    <div id="draggable-jalisco" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="jalisco" class="article-inspiracion">
+            <section class="close-inspiracion">
+                <a id="close-jalisco">&#x2715;</a>
+            </section>
+            <section class="foto-inspiracion">
+                <img src="images/inspiraciones/jalisco.jpg" alt="">
+            </section>
+            <section class="nombre-inspiracion">
+                <h1>Jalisco</h1>
+            </section>
+            <section class="body-inspiracion">
+                <p>Jalisco no solo es el estado de nacimiento y vivencias de los primeros años de Luis Barragán, sino que representa la cuna de un importante movimiento de la arquitectura mexicana del siglo XX, a la cual se le denominó como la Escuela Tapatía de Arquitectura (1926 – 1936).
+                    Este movimiento duró 10 años, iniciando con la influencia de las enseñanzas del Mediterráneo y las obras del arquitecto paisajista Ferdinand Bac, culminando justo con la partida de Barragán a la Ciudad de México.
+                    Barragán tuvo una relación estrecha con grandes personajes como José Clemente Orozco, el Doctor Atl, Chucho Reyes Ferreira, entre otros hombres ilustres de la época originarios de Jalisco.
+                    Uno de las localidades del estado de Jalisco que influenció sus obras es Mazamitla, donde la familia Barragán tenía un rancho en el cual pasó gran parte de su infancia. Además tenían una casa (que aún existe) en Chapala sobre la calle principal que conduce al lago. Esta casa fue remodelada por Luis en el año de 1931 (año en el cual regresó de su segundo viaje a Europa). 
+                    Luis Barragán nunca olvidó sus tempranas vivencias en diferentes lugares del estado de Jalisco y que pueden verse reflejadas de una manera moderna y personal en trabajos posteriores.
+                    </p>
+            </section>
+            <section class="footer-inspiracion">
+                <p></p>
+            </section>
+        </article>
+    </div>
+    
+    <div id="draggable-michoacan" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="michoacan" class="article-inspiracion">
+            <section class="close-inspiracion">
+                <a id="close-michoacan">&#x2715;</a>
+            </section>
+            <section class="foto-inspiracion">
+                <img src="images/inspiraciones/michoacan.jpg" alt="">
+            </section>
+            <section class="nombre-inspiracion">
+                <h1>Michoac&aacute;n</h1>
+            </section>
+            <section class="body-inspiracion">
+                <p>La cercanía con Jalisco y el constante transitar por el estado de Michoacán brindaron una fuente importante de
+                    inspiración para Barragán, la arquitectura vernácula y la herencia cultural Purépecha lo acercaron a las raíces de
+                    la vivienda popular mexicana.
+                    Barragán afirmó en alguna ocasión que las casas de este estado eran de una extraordinaria belleza, inclusive
+                    aseveraría que eran las casas más bonitas que había visto en su vida.
+                
+                    La influencia de Michoacán en la obra de Barragán no solo se limitaría a los elementos arquitectónicos; de igual
+                    forma, existe una estrecha relación con el arte popular y las tradiciones de este sitio que se pueden ver reflejadas
+                    en los elementos ornamentales de su casa.
+                </p>
+            </section>
+            <section class="footer-inspiracion">
+                <p></p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-marruecos" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="marruecos" class="article-inspiracion">
+            <section class="close-inspiracion">
+                <a id="close-marruecos">&#x2715;</a>
+            </section>
+            <section class="foto-inspiracion">
+                <img src="images/inspiraciones/marruecos.jpg" alt="">
+            </section>
+            <section class="nombre-inspiracion">
+                <h1>Marruecos</h1>
+            </section>
+            <section class="body-inspiracion">
+                <p>Entre 1952 y 1953 Luis Barragán visita Marruecos, país ubicado en el norte de África, donde queda impresionado por los
+                grandes paisajes y encuentra una conexión entre la cultura, la vestimenta y las danzas con las propias de México.
+                Asimismo, encuentra un vínculo entre la arquitectura islámica y la colonial.
+                “…Y existe un profundo vinculo histórico entre esas enseñanzas y la de los pueblos del norte de África y de Marruecos,
+                también estos han enriquecido mi percepción de la belleza en la simpleza arquitectónica.”
+                El arquitecto Barragán reconocerá en la casbah -construcciones árabes- una arquitectura que no tiene tiempo; ya que
+                fueron edificaciones construidas hace mil años y que continúan vigentes actualmente. De igual forma, le sorprende la
+                unificación tanto de materiales, forma y paisaje, en las que no existe un límite entre el suelo y la arquitectura.
+                La influencia de la cultura árabe se une en muchos sentidos a la arquitectura de Barragán, además de la atemporalidad,
+                forma y espacios, reconoce en sus viviendas un gran señorío al exterior y una gran alegría al interior.
+                </p>
+            </section>
+            <section class="footer-inspiracion">
+                <p></p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-alhambra" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="alhambra" class="article-inspiracion">
+            <section class="close-inspiracion">
+                <a id="close-alhambra">&#x2715;</a>
+            </section>
+            <section class="foto-inspiracion">
+                <img src="images/inspiraciones/alhambra.jpg" alt="">
+            </section>
+            <section class="nombre-inspiracion">
+                <h1>La Alhambra</h1>
+            </section>
+            <section class="body-inspiracion">
+                <p>Barragán visita en su primer viaje a Europa el Palacio de la Alhambra (Granada, España); quedando impresionando por sus
+                espacios de gran belleza y serenidad, se convierte en uno de los lugares que más influye en su carrera.
+                Mencionado por el mismo arquitecto en diversas ocasiones, las sorpresas y los contrastes a través de los cambios de
+                escala y luminosidad al caminar por los estrechos pasillos de la Alhambra, en los que su persona apenas podía erguirse,
+                se vuelven un elemento recurrente en sus obras. Guiado únicamente por manifestaciones de luz y el sonido del agua de las
+                fuentes, procura replicar dichas sensaciones en su propia casa mediante transiciones bajas y pequeñas puertas; al igual
+                que la creación de espacios de reflexión como sus jardines y patios, que siempre se encontrarán rodeados por muros y
+                cuya única apertura es el cielo.</p>
+            </section>
+            <section class="footer-inspiracion">
+                <p></p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-gimignano" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="san-gimignano" class="article-inspiracion">
+            <section class="close-inspiracion">
+                <a id="close-gimignano">&#x2715;</a>
+            </section>
+            <section class="foto-inspiracion">
+                <img src="images/inspiraciones/san-gimignano.jpg" alt="">
+            </section>
+            <section class="nombre-inspiracion">
+                <h1>San Gimignano</h1>
+            </section>
+            <section class="body-inspiracion">
+                <p>Al regreso de su segundo viaje a Europa y Estados Unidos en 1931, Luis Barragán llegó maravillado por San Gimignano, un
+                pequeño pueblo italino al suroeste de Florencia, amurallado y de origen medieval que había visitado.
+                En 1957, se le presentaría a Barragán la oportunidad idónea de plasmar lo que había observado en este pueblo de la
+                Toscana, cuando el arquitecto Mario Pani le encomendara realizar un hito urbano que ayudara a enmarcar el acceso a la
+                nueva Ciudad Satélite.
+                Recordando las altas torres que se podían ver desde lejos, Luis Barragán en colaboración con el artista alemán Mathias
+                Goeritz diseñan el conjunto de las Torres de Satélite, siendo hoy en día uno de los símbolos más representativos de
+                México; gracias a sus llamativos colores y el diseño de sus perspectivas para poder ser admiradas en movimiento desde un
+                coche.</p>
+            </section>
+            <section class="footer-inspiracion">
+                <p></p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-paris" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="paris" class="article-inspiracion">
+            <section class="close-inspiracion">
+                <a id="close-paris">&#x2715;</a>
+            </section>
+            <section class="foto-inspiracion">
+                <img src="images/inspiraciones/paris.jpg" alt="">
+            </section>
+            <section class="nombre-inspiracion">
+                <h1>Par&iacute;s</h1>
+            </section>
+            <section class="body-inspiracion">
+                <p>En 1925 se lleva a cabo la Exposición de Artes Decorativas en París, a la cual Barragán asiste y conoce la obra de
+                arquitectos como Le Corbusier, Frederick Kiesler y Ferdinand Bac. Sin embargo, es por este último que tiene mayor
+                interés y conoce su trabajo a través de sus publicaciones Jardines Encantados y Les Colombières.
+                Admirado por la identidad mediterránea de la obra de Ferdinand Bac, Barragán regresa con estas ideas y las implementa en
+                sus primeras obras en Guadalajara. Pero no es hasta su segundo viaje a Europa (1931) que Luis Barragán conoce en persona
+                a Bac.
+                En este mismo viaje, también conocerá en su estudio al arquitecto Le Corbusier, quien le hablaría sobre sus teorías
+                acerca de la arquitectura y lo invitaría a visitar sus obras, entre ellas La Villa Savoye.
+                Si bien, el primer acercamiento a los elementos nostálgicos en la arquitectura de Barragán se debe a la influencia de
+                Bac y, que implementara en su primera etapa en Guadalajara; la importancia de las ideas modernas se las debe a Le
+                Corbusier, comprendiendo su segunda etapa con las construcciones de estilo funcionalista que realiza en la ciudad de
+                México, principalmente en las colonias Hipódromo, Cuauhtémoc y Juárez.</p>
+            </section>
+            <section class="footer-inspiracion">
+                <p></p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-ny" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="ny" class="article-inspiracion">
+            <section class="close-inspiracion">
+                <a id="close-ny">&#x2715;</a>
+            </section>
+            <section class="foto-inspiracion">
+                <img src="images/inspiraciones/new-york.jpg" alt="">
+            </section>
+            <section class="nombre-inspiracion">
+                <h1>Nueva York</h1>
+            </section>
+            <section class="body-inspiracion">
+                <p>En 1931, Barragán visita Nueva York antes de regresar a Europa. Cabe mencionar que esta era una época importante en la
+                ciudad, pues un año antes (1930) había concluido la construcción del edificio Chrysler, y el mismo año de su visita se
+                termina el edificio Empire State.
+                Durante su estancia de tres meses conoce al artista José Clemente Orozco y al arquitecto austriaco Frederick Kiesler,
+                dos personajes que se convirtieron en sus amigos cercanos. Barragán hacía hincapié en las enseñanzas de Orozco, acerca
+                del valor universal que debería tener el arte al cual todos debemos aspirar. Asimismo, asimila la lección de Kiesler
+                sobre el entendimiento de un funcionalismo, no solo para el cuerpo sino también para el espíritu, de manera que el
+                hombre pueda vivir agradablemente.
+                Barragán describía Nueva York como una ciudad armoniosa y expresa su admiración por sus azoteas verdes, recalcando la
+                obligación del arquitecto de “llevar trozos de tierra en sus edificios” (como lo menciona en su entrevista con Elena
+                Poniatowska).
+                En 1976, el MoMA de Nueva York alberga la exposición ‘The Architecture of Luis Barragán’, curada por arquitecto
+                argentino Emilio Ambasz, dando reconocimiento a su obra y trayectoria como arquitecto.</p>
+            </section>
+            <section class="footer-inspiracion">
+                <p></p>
+            </section>
+        </article>
+    </div>
+
+
+    <!-------------------------Articles Biografias------------------------------------------------>
+    <div id="draggable-bac" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="ferdinand-bac" class="article-personaje">
+            <section class="close-personaje">
+                <a  id="close-bac">&#x2715;</a>
+            </section>
+            <section class="foto-personaje">
+                <div class="atras botones">&#60;</div>
+                <div class="adelante botones">&#62;</div>
+                <img src="images/personajes/bac/ferdinand-bac.jpg" alt="">
+            </section>
+            <section class="nombre-personaje">
+                <h1>Ferdinand Bac</h1>
+            </section>
+            <section class="body-personaje">
+                <p>Paisajista, poeta e ilustrador, diseñó varios jardines en la Riviera
+                    francesa durante los años 20s. En el primer viaje de Barragán a Europa
+                    en 1925, conoce las publicaciones de su trabajo,
+                    Los jardines encantados y Les Colombières; lo que, llevó al arquitecto a una admiración
+                    y entendimiento distinto de los jardines, convirtiéndose así, en uno de los personajes más
+                    influyentes en la obra de Luis Barragán.
+                </p>
+            </section>
+            <section class="footer-personaje">
+                <p>Alemania 1859 – Francia 1952</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-dratl" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="dr-atl" class="article-personaje">
+            <section class="close-personaje">
+                <a id="close-dratl">&#x2715;</a>
+            </section>
+            <section class="foto-personaje">
+                <div class="atras botones">&#60;</div>
+                <div class="adelante botones">&#62;</div>
+                <img src="images/personajes/atl/dr-atl.jpg" alt="">
+            </section>
+            <section class="nombre-personaje">
+                <h1>Gerardo Murillo</h1>
+            </section>
+            <section class="body-personaje">
+                <p>Artista, escritor y vulcanólogo mexicano, trabajó bajo el
+                pseudónimo de Doctor Atl (agua en náhuatl). Impartió clases en
+                la Academia de San Carlos, teniendo como alumnos a Rivera,
+                Siqueiros y Orozco. En 1957 recibió el Premio Nacional de las
+                Artes. Atl, jugó un papel crucial en el desarrollo de Jardines
+                del Pedregal, gracias a su amistad con Barragán y su pasión por
+                los volcanes. Ambos recorrían en ladécada de los 40, este paisaje de lava petrificada.</p>
+            </section>
+            <section class="footer-personaje">
+                <p>Jalisco 1875 – CDMX 1964</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-chucho" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="chucho-reyes" class="article-personaje">
+            <section class="close-personaje">
+                <a id="close-chucho">&#x2715;</a>
+            </section>
+            <section class="foto-personaje">
+                <div class="atras botones">&#60;</div>
+                <div class="adelante botones">&#62;</div>
+                <img src="images/personajes/chucho/chucho-reyes.jpg" alt="">
+            </section>
+            <section class="nombre-personaje">
+                <h1>Jesús Reyes Ferreira</h1>
+            </section>
+            <section class="body-personaje">
+                <p>Mejor conocido como “Chucho” Reyes fue uno de los artistas más 
+                    influyentes del Siglo XX en México. Su trabajo puede definirse 
+                    como arte popular, ya que, su inspiración proviene de lo verdaderamente 
+                    mexicano. Chucho, no sólo influyó a Luis Barragán en el uso del color, sino 
+                    en la apreciación de la belleza de los objetos y los elementos por sí mismos.</p>
+            </section>
+            <section class="footer-personaje">
+                <p>Jalisco 1882 – CDMX 1977</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-orozco" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="clemente-orozco" class="article-personaje">
+            <section class="close-personaje">
+                <a id="close-orozco">&#x2715;</a>
+            </section>
+            <section class="foto-personaje">
+                <div class="atras botones">&#60;</div>
+                <div class="adelante botones">&#62;</div>
+                <img src="images/personajes/orozco/orozco.jpg" alt="">
+            </section>
+            <section class="nombre-personaje">
+                <h1>José Clemente Orozco</h1>
+            </section>
+            <section class="body-personaje">
+                <p>Es considerado como uno de los principales representantes
+                del muralismo en México junto con Diego Rivera y David Alfaro
+                Siqueiros. Barragán y Orozco se conocieron en 1931, cuando el artista
+                residía en Nueva York, donde se vuelven grandes amigos. El arquitecto
+                lo describiría como: muy tapatío, muy moderno. Algo, a
+                lo cual, aspiró siempre el propio Luis Barragán.</p>
+            </section>
+            <section class="footer-personaje">
+                <p>Jalisco 1883 – CDMX 1949</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-diego" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="diego-rivera" class="article-personaje">
+            <section class="close-personaje">
+                <a id="close-diego">&#x2715;</a>
+            </section>
+            <section class="foto-personaje">
+                <div class="atras botones">&#60;</div>
+                <div class="adelante botones">&#62;</div>
+                <img src="images/personajes/diego/diego-rivera.jpg" alt="">
+            </section>
+            <section class="nombre-personaje">
+                <h1>Diego Rivera</h1>
+            </section>
+            <section class="body-personaje">
+                <p>Rivera no fue solamente uno de los pintores más importantes del Siglo XX,
+                sino un activistapolítico y social, así como, un gran promotor de la modernidad
+                en México. Muestra de ello, su casa diseñada por el arquitecto Juan O ‘Gorman en 1929.
+                En 1935, Rivera escribe un texto titulado Requisitos para la organización
+                de El Pedregal, que, posteriormente, Luis Barragán utilizará como reglamento para
+                el desarrollo residencial de Jardines del Pedregal en los años 40.
+                </p>
+            </section>
+            <section class="footer-personaje">
+                <p>Guanajuato 1886 – CDMX 1957</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-lecorbusier" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="le-corbusier" class="article-personaje">
+            <section class="close-personaje">
+                <a  id="close-lecorbusier">&#x2715;</a>
+            </section>
+            <section class="foto-personaje">
+                <div class="atras botones">&#60;</div>
+                <div class="adelante botones">&#62;</div>
+                <img src="images/personajes/lecorbusier/le-corbusier.jpg" alt="">
+            </section>
+            <section class="nombre-personaje">
+                <h1>Le Corbusier</h1>
+            </section>
+            <section class="body-personaje">
+                <p>Le Corbusier es el arquitecto más importante del Siglo XX. En 1926 publicó
+                    un manifiesto arquitectónico, titulado los 5 puntos de una arquitectura
+                    moderna, aunque, mas que una filosofía, se trata de una serie de pasos
+                    marcados por el uso del concreto armado. Barragán conoció al francosuizo
+                    en 1931 en París. Después de su encuentro, el arquitecto mexicano desarrolla
+                    una arquitectura funcionalista, que, aún en La casa estudio de Luis Barragán,
+                    retumba el eco de Le Corbusier.</p>
+            </section>
+            <section class="footer-personaje">
+                <p>Suiza 1887 – Francia 1965</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-albers" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="josef-albers" class="article-personaje">
+            <section class="close-personaje">
+                <a id="close-albers">&#x2715;</a>
+            </section>
+            <section class="foto-personaje">
+                <div class="atras botones">&#60;</div>
+                <div class="adelante botones">&#62;</div>
+                <img src="images/personajes/albers/josef-albers.jpg" alt="">
+            </section>
+            <section class="nombre-personaje">
+                <h1>Josef Albers</h1>
+            </section>
+            <section class="body-personaje">
+                <p>Artista y profesor de la escuela de arquitectura, arte y diseño
+                Bauhaus en Alemania; su arte geométrico fue fundamental para
+                la creación de los programas de educación artística del Siglo XX,
+                acerca del espacio y el color. Asimismo, impartió clases en prestigiosas
+                universidades de EEUU. En 1935, visitó México y su obra cobró otro
+                sentido. En los años 50s, inició la serie “Homenaje al cuadrado”, de los
+                cuales, una copia autorizada por el mismo Albers se encuentra en
+                la estancia de la Casa deLuis Barragán.</p>
+            </section>
+            <section class="footer-personaje">
+                <p>Alemania 1888 – EEUU 1976</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-clara" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="clara-porset" class="article-personaje">
+            <section class="close-personaje">
+                <a id="close-clara">&#x2715;</a>
+            </section>
+            <section class="foto-personaje">
+                <div class="atras botones">&#60;</div>
+                <div class="adelante botones">&#62;</div>
+                <img src="images/personajes/clara/clara-porset.jpg" alt="">
+            </section>
+            <section class="nombre-personaje">
+                <h1>Clara Porset</h1>
+            </section>
+            <section class="body-personaje">
+                <p>Clara es considerada como una de las mujeres más importantes del diseño
+                moderno y pionera de la profesión en México. Colaboró con arquitectos como
+                Luis Barragán y Mario Pani. Una de sus creaciones más relevantes fue el butaque
+                Miguelito en colaboración con Barragán. Esta pieza se puede encontrar en la
+                casa estudio del arquitecto en la Ciudad de México. Clara es sinónimo de tradición
+                y modernidad, abstrayendomodelos artesanales y adaptándolos al mundo moderno.</p>
+            </section>
+            <section class="footer-personaje">
+                <p>Cuba 1895 – CDMX 1981</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-cetto" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="max-cetto" class="article-personaje">
+            <section class="close-personaje">
+                <a id="close-cetto">&#x2715;</a>
+            </section>
+            <section class="foto-personaje">
+                <div class="atras botones">&#60;</div>
+                <div class="adelante botones">&#62;</div>
+                <img src="images/personajes/cetto/max-cetto.jpg" alt="">
+            </section>
+            <section class="nombre-personaje">
+                <h1>Max Cetto</h1>
+            </section>
+            <section class="body-personaje">
+                <p>Fue un arquitecto de origen alemán, que llegó a México a finales de los años 30`s.
+                Cetto impulsó una nueva visión de la arquitectura que incluía la tradición Europea,
+                mezclándola con las tecnologías de la modernidad y el aporte vernáculo de la arquitectura
+                mexicana. Edificó la primera casa del Pedregal y tuvo diversas colaboraciones
+                con Luis Barragán. Su importancia es tal, que se creó un taller de arquitectura en
+                su nombre en 1973 en la UNAM.</p>
+            </section>
+            <section class="footer-personaje">
+                <p>Alemania 1903 – CDMX 1980</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-ogorman" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="o-gorman" class="article-personaje">
+            <section class="close-personaje">
+                <a id="close-ogorman">&#x2715;</a>
+            </section>
+            <section class="foto-personaje">
+                <div class="atras botones">&#60;</div>
+                <div class="adelante botones">&#62;</div>
+                <img src="images/personajes/ogorman/juan-o-gorman.jpg" alt="">
+            </section>
+            <section class="nombre-personaje">
+                <h1>Juan O ‘Gorman</h1>
+            </section>
+            <section class="body-personaje">
+                <p>Juan O’ Gorman fue un arquitecto y pintor de ascendencia irlandesa,
+                que introdujo las ideas de arquitectura moderna de Le Corbusier a México
+                con su Casa Estudio en el Barrio de San Ángel Inn; siendo no sólo el primero,
+                sino uno de los más radicales funcionalistas en México. Tras retirarse de la
+                práctica profesional en 1936, regresa en 1950 con el diseño de la Biblioteca
+                Central en CU (Patrimonio Mundial 2007), una arquitectura nueva, mexicana y moderna.</p>
+            </section>
+            <section class="footer-personaje">
+                <p>CDMX 1905 – CDMX 1982</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-pani" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="mario-pani" class="article-personaje">
+            <section class="close-personaje">
+                <a id="close-pani">&#x2715;</a>
+            </section>
+            <section class="foto-personaje">
+                <div class="atras botones">&#60;</div>
+                <div class="adelante botones">&#62;</div>
+                <img src="images/personajes/pani/mario-pani.jpg" alt="">
+            </section>
+            <section class="nombre-personaje">
+                <h1>Mario Pani</h1>
+            </section>
+            <section class="body-personaje">
+                <p>Mario Pani fue uno de los arquitectos más importantes de México del Siglo XX.
+                Estudió en Francia, y en México realizó varias obras importantes, como el conjunto
+                Nonoalco Tlatelolco, Ciudad Satélite, el Multifamiliar Miguel Alemán y el
+                Plan maestro de CU. En 1957, mientras proyectaba Ciudad Satélite, encomendó a Luis
+                Barragán la tarea de diseñar un monumento de acceso, edificando así, el conjunto
+                escultórico de las Torres de Satélite. </p>
+            </section>
+            <section class="footer-personaje">
+                <p>CDMX 1911 – CDMX 1993</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-goeritz" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="mathias-goeritz" class="article-personaje">
+            <section class="close-personaje">
+                <a id="close-goeritz">&#x2715;</a>
+            </section>
+            <section class="foto-personaje">
+                <div class="atras botones">&#60;</div>
+                <div class="adelante botones">&#62;</div>
+                <img src="images/personajes/goeritz/mathias-goeritz.jpg" alt="">
+            </section>
+            <section class="nombre-personaje">
+                <h1>Mathias Goeritz</h1>
+            </section>
+            <section class="body-personaje">
+                <p>Fue uno delos artistas más importantes en el arte mexicano, después
+                de establecerse en México a causa de la Segunda Guerra Mundial. Impartió
+                clases en la escuela de arquitectura de Guadalajara desde 1948. En 1953
+                inaugura el museo experimental El Eco y publica el Manifiesto de Arquitectura
+                Emocional. En 1957, en colaboración con Barragán, diseñan el conjunto
+                escultórico de las Torres de Satélite, transformándose en un hito urbano de México.</p>
+            </section>
+            <section class="footer-personaje">
+                <p>Alemania 1915 – CDMX 1990</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-emilio" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="emilio-ambasz" class="article-personaje">
+            <section class="close-personaje">
+                <a id="close-emilio">&#x2715;</a>
+            </section>
+            <section class="foto-personaje">
+                <div class="atras botones">&#60;</div>
+                <div class="adelante botones">&#62;</div>
+                <img src="images/personajes/emilio/emilio-ambasz.jpg" alt="">
+            </section>
+            <section class="nombre-personaje">
+                <h1>Emilio Ambasz</h1>
+            </section>
+            <section class="body-personaje">
+                <p>Emilio Ambasz estudió arquitectura en Princeton y fue curador del Museo de 
+                    Arte Moderno de Nueva York (MoMA), siendo el responsable de la exposición 
+                    y el libro-catálogo The Architecture of Luis Barragán en 1976, sobre la 
+                    obra del arquitecto mexicano. Dicha exposición y libro, dieron a conocer el 
+                    trabajo de Barragán mundialmente; siendo así, que,  4 años después, Barragán 
+                    fuera galardonado con el premio Pritzker de arquitectura.</p>
+            </section>
+            <section class="footer-personaje">
+                <p>Argentina 1943</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-schjetnan" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="mario-schjetnan" class="article-personaje">
+            <section class="close-personaje">
+                <a id="close-schjetnan">&#x2715;</a>
+            </section>
+            <section class="foto-personaje">
+                <div class="atras botones">&#60;</div>
+                <div class="adelante botones">&#62;</div>
+                <img src="images/personajes/schjetnan/mario-schjetnan.jpg" alt="">
+            </section>
+            <section class="nombre-personaje">
+                <h1>Mario Schjetnan</h1>
+            </section>
+            <section class="body-personaje">
+                <p>Schjetnan, después de Barragán, es el paisajista más reconocido en México. 
+                    Se graduó de la Escuela de Arquitectura de CU en 1968 y, en 1972, junto con Luis 
+                    Barragán y otros reconocidos arquitectos, fundan la Sociedad de Arquitectos Paisajistas de 
+                    México (SAPM). Schjetnan, ha ganado muchos premios, entre ellos, el Sir Geoffrey Jellicoe Award, 
+                    mayor premio para paisajistas, así como, el premio Cemex en 2017.</p>
+            </section>
+            <section class="footer-personaje">
+                <p>CDMX 1945</p>
+            </section>
+        </article>
+    </div>
+
+    <!--Planos Article---------------------------------------------------------------------------------->
+    <div id="draggable-general" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="general" class="article-plano">
+            <section class="close-plano">
+                <a id="close-general">&#x2715;</a>
+            </section>
+            <section class="foto-plano">
+                <!--<div class="atras-plano botones-plano">&#x25c0;</div>-->
+                <img src="images/gifs/zonas.gif" alt="">
+                <!--<div class="adelante-plano botones-plano">&#x25b6;</div>-->
+            </section>
+            <section class="footer-plano">
+                <p>General</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-zaguan" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="zaguan" class="article-plano">
+            <section class="close-plano">
+                <a id="close-zaguan">&#x2715;</a>
+            </section>
+            <section class="foto-plano">
+                <div class="atras-plano botones-plano">&#x25c0;</div>
+                <img src="images/gifs/zaguan.gif" alt="">
+                <div class="adelante-plano botones-plano">&#x25b6;</div>
+            </section>
+            <section class="footer-plano">
+                <p>Zagu&aacute;n</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-vestibulo" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="vestibulo" class="article-plano">
+            <section class="close-plano">
+                <a id="close-vestibulo">&#x2715;</a>
+            </section>
+            <section class="foto-plano">
+                <div class="atras-plano botones-plano">&#x25c0;</div>
+                <img src="images/gifs/vestibulo.gif" alt="">
+                <div class="adelante-plano botones-plano">&#x25b6;</div>
+            </section>
+            <section class="footer-plano">
+                <p>Vest&iacute;bulo</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-salas" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="salas" class="article-plano">
+            <section class="close-plano">
+                <a id="close-salas">&#x2715;</a>
+            </section>
+            <section class="foto-plano">
+                <div class="atras-plano botones-plano">&#x25c0;</div>
+                <img src="images/gifs/salas.gif" alt="">
+                <div class="adelante-plano botones-plano">&#x25b6;</div>
+            </section>
+            <section class="footer-plano">
+                <p>Salas</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-comedor" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="comedor" class="article-plano">
+            <section class="close-plano">
+                <a id="close-comedor">&#x2715;</a>
+            </section>
+            <section class="foto-plano">
+                <div class="atras-plano botones-plano">&#x25c0;</div>
+                <img src="images/gifs/comedor.gif" alt="">
+                <div class="adelante-plano botones-plano">&#x25b6;</div>
+            </section>
+            <section class="footer-plano">
+                <p>Comedor</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-cuartos" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="cuartos" class="article-plano">
+            <section class="close-plano">
+                <a id="close-cuartos">&#x2715;</a>
+            </section>
+            <section class="foto-plano">
+                <div class="atras-plano botones-plano">&#x25c0;</div>
+                <img src="images/gifs/cuartos.gif" alt="">
+                <div class="adelante-plano botones-plano">&#x25b6;</div>
+            </section>
+            <section class="footer-plano">
+                <p>Cuartos</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-terraza" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="terraza" class="article-plano">
+            <section class="close-plano">
+                <a id="close-terraza">&#x2715;</a>
+            </section>
+            <section class="foto-plano">
+                <div class="atras-plano botones-plano">&#x25c0;</div>
+                <img src="images/gifs/terraza.gif" alt="">
+                <div class="adelante-plano botones-plano">&#x25b6;</div>
+            </section>
+            <section class="footer-plano">
+                <p>Terraza</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-jardin" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="jardin" class="article-plano">
+            <section class="close-plano">
+                <a id="close-jardin">&#x2715;</a>
+            </section>
+            <section class="foto-plano">
+                <div class="atras-plano botones-plano">&#x25c0;</div>
+                <img src="images/gifs/jardin.gif" alt="">
+                <div class="adelante-plano botones-plano">&#x25b6;</div>
+            </section>
+            <section class="footer-plano">
+                <p>Jardín</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-ollas" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="ollas" class="article-plano">
+            <section class="close-plano">
+                <a id="close-ollas">&#x2715;</a>
+            </section>
+            <section class="foto-plano">
+                <div class="atras-plano botones-plano">&#x25c0;</div>
+                <img src="images/gifs/ollas.gif" alt="">
+                <div class="adelante-plano botones-plano">&#x25b6;</div>
+            </section>
+            <section class="footer-plano">
+                <p>Patio de las Ollas</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-taller" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="taller" class="article-plano">
+            <section class="close-plano">
+                <a id="close-taller">&#x2715;</a>
+            </section>
+            <section class="foto-plano">
+                <div class="atras-plano botones-plano">&#x25c0;</div>
+                <img src="images/gifs/taller.gif" alt="">
+                <div class="adelante-plano botones-plano">&#x25b6;</div>
+            </section>
+            <section class="footer-plano">
+                <p>Taller</p>
+            </section>
+        </article>
+    </div>
+
+    <!--Contenedor Galeia 360---------------------------------------------------------------------------------->
+    <div id="galeria360" class="article-plano360">
+        <div class="close-plano">
+            <a id="close-galeria360">&#x2715;</a>
+        </div>
+        <div class="foto-plano360">
+            <a-scene embedded class="img360">
+                <a-asets>
+                    <img id="zaguan-panoramica" src="images/360/zaguan.JPG"/>
+                    <img id="vestibulo-panoramica" src="images/360/vestibulo.JPG"/>
+                    <img id="sala-panoramica" src="images/360/sala.JPG"/>
+                    <img id="comedor-panoramica" src="images/360/comedor.JPG"/>
+                    <img id="jardin-panoramica" src="images/360/jardin.JPG"/>
+                    <img id="ollas-panoramica" src="images/360/ollas.JPG"/>
+                    <img id="terraza-panoramica" src="images/360/terraza.jpg"/>
+                    <img id="cristo-panoramica" src="images/360/cristo.JPG"/>
+                    <img id="taller-panoramica" src="images/360/taller.JPG"/>
+                    <img id="fachada-panoramica" src="images/360/fachada.JPG"/>
+                </a-asets>
+                <a-sky src="#fachada-panoramica" rotation="0 -90 0"></a-sky>
+            </a-scene>
+        </div>
+        <div class="footer-plano">
+            <p id="pantalla-completa">Pantalla completa &#x2191;</p>
+        </div>
+    </div>
+
+    <!--Bibliografia Libros Article---------------------------------------------------------------------------------->
+    <div id="draggable-bibliografia" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="bibliografia" class="article-bibliografia">
+            <section class="close-plano">
+                <a id="close-bibliografia">&#x2715;</a>
+            </section>
+            <section class="foto-bibliografia">
+                <div class="atras-plano botones-bibliografia">&#x25c0;</div>
+                <img src="images/bibliografia/bibliografia-1.jpg" alt="">
+                <div class="adelante-plano botones-bibliografia">&#x25b6;</div>
+            </section>
+            <section class="footer-plano">
+                <p>Bibliograf&iacute;a</p>
+            </section>
+        </article>
+    </div>
+
+    <!--Creditos Article---------------------------------------------------------------------------------->
+    <div id="draggable-creditos" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="creditos" class="article-creditos">
+            <section class="close-creditos-article">
+                <a id="close-creditos">&#x2715;</a>
+            </section>
+            <section class="body-creditos">
+                <section class="fotos-team">
+                    <section id="team1">
+                        <img src="images/team/santo.png" alt="">
+                        <img src="images/team/xime.png" alt="">
+                        <img src="images/team/manolo.png" alt="">
+                    </section>
+                    <section id="team2">
+                        <img src="images/team/gabi.png" alt="">
+                        <img src="images/team/harley.png" alt="">
+                        <img src="images/team/sael.png" alt="@cigarros.sueltos">
+                    </section>
+                </section>
+                <section class="info-creditos">
+                    <a>¿Quiénes Somos?</a>
+                    <p>Itinerario Barragán es una iniciativa para dar a conocer un fragmento del Patrimonio arquitectónico, cultural e
+                    histórico de nuestro país a las nuevas generaciones de estudiantes.
+                    </p>
+                    <p>Por tal motivo, surge la idea de generar una plataforma digital, mediante la cual, el usuario pueda conocer la vida
+                    y obra del arquitecto más importante que ha tenido México. Asimismo, acceder de manera virtual a la que fuera su
+                    casa por más de cuarenta años.
+                    </p>
+                    <section id="nombres-creditos">
+                        <section class="team-nombres">
+                            <a>Santiago Llamas</a>
+                            <p>Direcci&oacute;n
+                                <br>
+                                llamascervantes@gmail.com
+                                <br>
+                                <a href="https://www.instagram.com/sanllacer/" target="_blank">
+                                    <img src="images/team/ig.png" alt="">
+                                </a>
+                            </p>
+                            <a>Ximena Lora</a>
+                            <p>Direcci&oacute;n de Arte y de Dise&ntilde;o Gr&aacute;fico
+                                <br>
+                                ximenalorasolis@gmail.com
+                                <br>
+                                <a href="https://www.instagram.com/ximelora/" target="_blank">
+                                    <img src="images/team/ig.png" alt="">
+                                </a>
+                            </p>
+                            <a>Manuel Tuda</a>
+                            <p>Coordinaci&oacute;n de Investigaci&ntilde;on
+                                <br>
+                                manolo_tuda@hotmail.com
+                                <br>
+                                <a href="https://www.instagram.com/m.tuda/" target="_blank">
+                                    <img src="images/team/ig.png" alt="">
+                                </a>
+                            </p>
+                        </section>
+                        <section class="team-nombres">
+                            <a>Gabriela Bermeo</a>
+                            <p>Gerencia de Proyecto
+                                <br>
+                                gabriela.bermeo@gmail.com
+                                <br>
+                                <a href="https://www.instagram.com/maricela_bermeo/" target="_blank">
+                                    <img src="images/team/ig.png" alt="">
+                                </a>
+                            </p>
+                            <a>Harley Pineda</a>
+                            <p>Gráfica Arquitect&oacute;nica
+                                <br>
+                                apineda177@hotmail.com
+                                <br>
+                                <a href="https://www.instagram.com/hars_pinedars/" target="_blank">
+                                    <img src="images/team/ig.png" alt="">
+                                </a>
+                            </p>
+                            <a>Sael Flores</a>
+                            <p>Desarrollador
+                                <br>
+                                sael.floresv@gmail.com
+                                <br>
+                                <a href="https://www.instagram.com/cigarros.sueltos/" target="_blank">
+                                    <img src="images/team/ig.png" alt="">
+                                </a>
+                                <a href="https://www.linkedin.com/in/hugo-sael-flores-velazquez-0375321b4"  target="_blank">
+                                    <img src="images/team/in.png" alt="">
+                                </a>
+                            </p>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="footer-creditos">
+                <p></p>
+            </section>
+        </article>
+    </div>
+
+    <!--Timeline Articles---------------------------------------------------------------------------------->
+    <div id="draggable-1900" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="1900" class="article-decada">
+            <section class="close-decada">
+                <a id="close-1900">&#x2715;</a>
+            </section>
+            <section class="titulo-decada">
+                <h1>1900</h1>
+            </section>
+            <section class="body-decada">
+                <p><a>1902</a> Nace Luis Ramiro Barragán Morfín en la Ciudad de Guadalajara.<br><br>
+                    <a>1903</a> Nace Max Cetto en Coblenza, Alemania.<br><br>
+                    <a>1905</a> Nace Juan O ‘Gorman en la Ciudad de México.<br><br>
+                    <a>1907</a> Diego Rivera sale de México a Europa para regresar hasta 1921.<br><br>
+                    <a>1907</a> Pablo Picasso pinta las señoritas de Aviñón.
+                    </p>
+            </section>
+            <section class="footer-decada">
+                <p>1900 - 1909</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-1910" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="1910" class="article-decada">
+            <section class="close-decada">
+                <a id="close-1910">&#x2715;</a>
+            </section>
+            <section class="titulo-decada">
+                <h1>1910</h1>
+            </section>
+            <section class="body-decada">
+                <p><a>1910</a> Frank Lloyd Wright diseña la Casa Robbie en Oak Park, Chicago.<br><br>
+                    <a>1910</a> Inicia la Revolución Mexicana.<br><br>
+                    <a>1911</a> Inauguración del Museo Nacional de Arte en México.<br><br>
+                    <a>1911</a> Nace Mario Pani en la Ciudad de México.<br><br>
+                    <a>1911</a> Francisco I. Madero toma el cargo de presidente en México.<br><br>
+                    <a>1912</a> Se hunde el transatlántico Titanic.<br><br>
+                    <a>1913</a> Victoriano Huerta hace un golpe de Estado contra Madero.<br><br>
+                    <a>1919</a> Estalla la primera Guerra Mundial.<br><br>
+                    <a>1915</a> Nace Mathias Goeritz en Dánzig, Alemania.<br><br>
+                    <a>1917</a> Venustiano Carranza proclama la Constitución de 1917.<br><br>
+                    <a>1917</a> Inicia la Revolución Rusa.<br><br>
+                    <a>1919</a> Luis Barragán ingresa a la Escuela Libre de Ingenieros de Guadalajara.<br><br>
+                    <a>1919</a> Nace la escuela Bauhaus en Alemania con el término de la Primera Guerra Mundial.
+                    </p>
+            </section>
+            <section class="footer-decada">
+                <p>1910 - 1919</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-1920" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="1920" class="article-decada">
+            <section class="close-decada">
+                <a id="close-1920">&#x2715;</a>
+            </section>
+            <section class="titulo-decada">
+                <h1>1920</h1>
+            </section>
+            <section class="body-decada">
+                <p><a>1920</a>  Álvaro Obregón toma el cargo de presidente en México.<br><br>
+                    <a>1921</a>  Consumación de la Revolución Mexicana.<br><br>
+                    <a>1921</a>  Retorna Diego Rivera a México tras su estancia en Europa.<br><br>
+                    <a>1921</a>  Nace el muralismo con José Vasconcelos al cargo de la Secretaría de Educación Pública.<br><br>
+                    <a>1922</a>  Juan O’Gorman inicia su carrera en la Escuela Nacional de Arquitectura.<br><br>
+                    <a>1923</a>  Luis Barragán termina sus estudios como Ingeniero Civil.<br><br> 
+                    <a>1923</a>  Diego Rivera pinta los murales en la Secretaría de Educación.<br><br>
+                    <a>1924</a>  Plutarco Elías Calles asume el cargo de presidente en México.<br><br>
+                    <a>1925</a>  Luis Barragán hace su primer viaje a Europa y asiste a la Exposición Internacional de Artes Decorativas en París.<br><br>
+                    <a>1925</a>  Luis Barragán conoce la obra de Ferdinand Bac.<br><br>
+                    <a>1925</a>  Juan O ‘Gorman se recibe como Arquitecto en la Escuela Nacional de Arquitectura.<br><br>
+                    <a>1925</a>  Carlos Contreras propone la construcción del Anillo Periférico de la Ciudad de México.<br><br>
+                    <a>1926</a>  Inicia la Guerra Cristera en México.<br><br>
+                    <a>1926</a>  Le Corbusier publica los 5 puntos para una nueva arquitectura.<br><br>
+                    <a>1927</a>  Barragán hace su primer proyecto con la casa de Emiliano Robles en Guadalajara.<br><br>
+                    <a>1929</a>  Barragán lleva a cabo el proyecto de la Casa Cristo en Guadalajara.<br><br>
+                    <a>1929</a>  Mies van der Rohe diseña el Pabellón de Barcelona.<br><br>
+                    <a>1929</a>  Termina la Guerra Cristera en México.<br><br>
+                    <a>1929</a>  Nace el Partido Nacional Revolucionario en México.<br><br>
+                    <a>1929</a>   Surge la Gran Depresión como una crisis económica mundial.<br><br>
+                    <a>1929</a>  Barragán diseña la Casa Efraín González Luna en Guadalajara.
+                    </p>
+            </section>
+            <section class="footer-decada">
+                <p>1920 - 1929</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-1930" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="1930" class="article-decada">
+            <section class="close-decada">
+                <a id="close-1930">&#x2715;</a>
+            </section>
+            <section class="titulo-decada">
+                <h1>1930</h1>
+            </section>
+            <section class="body-decada">
+                <p><a>1930</a>  Juan O ‘Gorman construye la primera casa moderna de América en la Ciudad de México.<br><br>
+                    <a>1930</a>  Inauguración del edificio Chrysler en Nueva York.<br><br>
+                    <a>1930</a>  Pascual Ortiz Rubio toma la presidencia en México.<br><br> 
+                    <a>1931</a>  Juan Segura construye el edificio Ermita en la Ciudad de México.<br><br>
+                    <a>1931</a>  Le Corbusier construye la Villa Savoye a las afueras de París.<br><br>
+                    <a>1931</a>  Inauguración del edificio Empire States en Nueva York.<br><br>
+                    <a>1931</a>  Luis Barragán viaja a Nueva York y visita a José Clemente Orozco y Frederick Kiesler.<br><br>
+                    <a>1931</a>  Barragán realiza su segundo viaje a Europa.<br><br>
+                    <a>1931</a>  Barragán conoce a Le Corbusier en su estudio en París y a Ferdinand Bac.<br><br>
+                    <a>1931</a>  Juan O ‘Gorman realiza la Casa y Estudio de Diego Rivera y Frida Kahlo en la Ciudad de México.<br><br>
+                    <a>1933</a>  Cierre de la Bauhaus en Alemania.<br><br>
+                    <a>1933</a>  Rivera lleva acabo un mural en el Rockefeller Center en NY, que posteriormente sería derribado.<br><br>
+                    <a>1933</a>  Nace el Partido Nacional Socialista en Alemania.<br><br>
+                    <a>1934</a>  Los hermanos Barragán llevan a cabo el Parque de la Revolución en Guadalajara.<br><br>
+                    <a>1934</a>  Lázaro Cárdenas asume el cargo como presidente en México.<br><br> 
+                    <a>1934</a>  Reforma Agraria en México.<br><br>
+                    <a>1935</a>  Barragán se establece en la Ciudad de México.<br><br>
+                    <a>1936</a>  Juan ‘Gorman decide retirarse de la práctica profesional de la arquitectura.<br><br>
+                    <a>1936</a>  Inicio de la Guerra civil española.<br><br>
+                    <a>1937</a>  Barragán desarrolla diversos proyectos en las colonias Juárez e Hipódromo Condesa en la Ciudad de México.<br><br>
+                    <a>1937</a>  Frank Lloyd Wright realiza La Casa de la Cascada en Mill Run, Pensilvania.<br><br>
+                    <a>1937</a>  Desarrollo de la Casa Estudio de José Clemente Orozco en colaboración entre Barragán y Orozco en Guadalajara.<br><br>
+                    <a>1938</a>  Luis Barragán entabla amistad con Richard Neutra.<br><br>
+                    <a>1938</a>  Chucho Reyes se establece en la Ciudad de México.<br><br>
+                    <a>1938</a>  Expropiación Petrolera encabezada por Lázaro Cárdenas.<br><br>
+                    <a>1939</a>  Fin de la Guerra Civil española.<br><br>
+                    <a>1939</a>  Inicio de la Segunda Guerra Mundial.<br><br>
+                    <a>1939</a>  Max Cetto y Clara Porset se establecen el a Ciudad de México.<br><br>
+                    <a>1939</a>  Barragán y Cetto realizan el Estudio para Cuatro Artistas en la Glorieta Melchor Ocampo.
+                    </p>
+            </section>
+            <section class="footer-decada">
+                <p>1930 - 1939</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-1940" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="1940" class="article-decada">
+            <section class="close-decada">
+                <a id="close-1940">&#x2715;</a>
+            </section>
+            <section class="titulo-decada">
+                <h1>1940</h1>
+            </section>
+            <section class="body-decada">
+                <p><a>1940</a>  Manuel Ávila Camacho toma cargo de la presidencia en México.<br><br>
+                    <a>1940</a>  Luis Barragán entabla amistad con el pintor y anticuario Chucho Reyes.<br><br>
+                    <a>1940</a>  Luis Barragán se retira temporalmente de la arquitectura tras hacer la Casa Villaseñor.<br><br> 
+                    <a>1940</a>  Barragán compra terrenos en Tacubaya, sobre la Av. Madereros (Constituyentes hoy en día).<br><br>
+                    <a>1941</a>  Alvar Aalto lleva a cabo la Villa Mairea en Finlandia.<br><br>
+                    <a>1943</a>  Luis Barragán construye su primera casa en Tacubaya junto con 4 jardines.<br><br>
+                    <a>1943</a>  El Dr. Atl es testigo del nacimiento el Volcán Paricutín en Michoacán.<br><br>
+                    <a>1945</a>  Fin de la Segunda Guerra Mundial.<br><br>
+                    <a>1946</a>  Luis Barragán compra junto con José Alberto Bustamante un terreno de más de 300 hectáreas en el Pedregal de San Ángel.<br><br>
+                    <a>1946</a>  Inicio del proyecto, Jardines del Pedregal.<br><br>
+                    <a>1946</a>  Miguel Alemán Valdés asume el cargo de presidente en México.<br><br>
+                    <a>1947</a>  Construcción de las casas muestra en Jardines del pedregal, colaboración entre Luis Barragán y Max Cetto.<br><br>
+                    <a>1947</a>   Planeación de la Casa Prieto López de Luis Barragán donde hay una estrecha colaboración de Clara Porset.<br><br>
+                    <a>1948</a>   Luis Barragán construye su Casa en el Barrio de Tacubaya.<br><br>
+                    <a>1948</a>   Devaluación de la moneda en México.<br><br>
+                    <a>1948</a>   Max Cetto diseña su casa estudio en la Calle Agua en Jardines del Pedregal, la primera casa del Pedregal.<br><br>
+                    <a>1949</a>   Phillip Johnson diseña la Glass House en Estados Unidos.<br><br>
+                    <a>1949</a>   Luis Barragán entabla amistad con Mathias Goeritz.<br><br>
+                    <a>1949</a>   Muere José Clemente Orozco sin terminar el mural del Multifamiliar Miguel Alemán encargado por Mario Pani.<br><br>
+                    <a>1949</a>   Juan O ´Gorman diseña el mural-mosaico de la Biblioteca Central de la UNAM en la futura Ciudad Universitaria.<br><br>
+                    <a>1949</a>   Inicio de la Revolución China.
+                    </p>
+            </section>
+            <section class="footer-decada">
+                <p>1940 - 1949</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-1950" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="1950" class="article-decada">
+            <section class="close-decada">
+                <a id="close-1950">&#x2715;</a>
+            </section>
+            <section class="titulo-decada">
+                <h1>1950</h1>
+            </section>
+            <section class="body-decada">
+                <p><a>1950</a>   Inicio de la construcción de la Ciudad Universitaria con el plan maestro de Mario Pani y Enrique del Moral.<br><br>
+                    <a>1950</a>   Josef Albers inicia la serie Homenaje al cuadrado.<br><br>
+                    <a>1951</a>   Mies van der Rohe diseña la Casa Farnsworth en Estados Unidos.<br><br>
+                    <a>1951</a>   Mathias Goeritz realiza la escultura El animal del Pedregal, para el acceso de Jardines del Pedregal.<br><br>
+                    <a>1952</a>   Barragán viaja a Marruecos y la zona norte de Europa.<br><br>
+                    <a>1952</a>   Inauguración de Ciudad Universitaria por el presidente Miguel Alemán Valdés.<br><br>
+                    <a>1952</a>   Le Corbusier lleva a cabo el conjunto habitacional de Marsella en Francia.<br><br>
+                    <a>1952</a>   Mario Pani finaliza la Torre de Rectoría de Ciudad Universitaria.<br><br>
+                    <a>1952</a>   Fallece Ferdinand Bac en Francia.<br><br>
+                    <a>1953</a>   Mathias Goeritz inaugura el museo experimental El eco junto con la publicación del Manifiesto de la arquitectura emocional.<br><br>
+                    <a>1953</a>   Derecho de voto por parte de la mujer en México.<br><br>
+                    <a>1953</a>   Inicia la Revolución Cubana.<br><br>
+                    <a>1953</a>   Barragán realiza una propuesta de mejoramiento de la plancha del Zócalo.<br><br>
+                    <a>1954</a>   Luis Barragán inicia el proyecto de la Casa Gálvez en Chimalistac y deja la empresa Jardines del Pedregal.<br><br>
+                    <a>1954</a>   Termina el muralismo con la finalización de la Ciudad Universitaria.<br><br>
+                    <a>1954</a>    Mario Pani empieza el desarrollo de Ciudad Satélite.<br><br>
+                    <a>1954</a>    Le Corbusier diseña la Capilla Ronchamp en Francia.<br><br>
+                    <a>1955</a>    Barragán inicia el proyecto para la orden de las Capuchinas Sacramentarias en Tlalpan, al cual, invita a Chucho Reyes y Mathias Goeritz a colaborar.<br><br>
+                    <a>1955</a>   Se concluye el museo Anahuacalli, realizado por Diego Rivera y Juan O ‘Gorman.<br><br>
+                    <a>1956</a>   Inicia la construcción de Brasilia, diseñada por el urbanista Lúcio Costa y el arquitecto Oscar Niemeyer.<br><br>
+                    <a>1957</a>   Arturo Pérez Rayón hace el plan maestro del IPN.<br><br>
+                    <a>1957</a>   Fallece Diego Rivera en la Ciudad de México.<br><br>
+                    <a>1957</a>   Mario Pani encarga el proyecto de las Torres de Satélite a Luis Barragán que, a su vez, invita a una colaboración formal a Mathias Goeritz.<br><br>
+                    <a>1957</a>  Dr. Atl es galardonado con el Premio Nacional de las Artes.<br><br>
+                    <a>1958</a>  Félix Candela y Mies Van der Rohe colaboran en el edificio Bacardi en Cuautitlán Izcalli.<br><br>
+                    <a>1958</a>  Adolfo López Mateos toma la presidencia en México.<br><br>
+                    <a>1958</a>  Barragán inicia el desarrollo del conjunto de las Arboledas.<br><br>
+                    <a>1959</a>  Concluye la construcción del Museo Guggenheim del arquitecto Frank Lloyd Wright en Nueva York.<br><br>
+                    <a>1959</a>  Fin de la Revolución Cubana.
+                </p>
+            </section>
+            <section class="footer-decada">
+                <p>1950 - 1959</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-1960" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="1960" class="article-decada">
+            <section class="close-decada">
+                <a id="close-1960">&#x2715;</a>
+            </section>
+            <section class="titulo-decada">
+                <h1>1960</h1>
+            </section>
+            <section class="body-decada">
+                <p><a>1960</a>  Nacionalización de la Industria Eléctrica en México.<br><br>
+                    <a>1962</a>  Juan O ‘Gorman construye su casa en el Pedregal, conocida como la Casa de la Gruta.<br><br>
+                    <a>1964</a>  Mario Pani construye el multifamiliar Tlatelolco Nonoalco.<br><br>
+                    <a>1964</a>  Barragán y Sordo Magdaleno proyectan la Ciudad Lomas Verdes para 100,000 habitantes, que no llega a construirse.<br><br>
+                    <a>1964</a>  Gustavo Díaz Ordaz asume la presidencia de México.<br><br>
+                    <a>1964</a>  Luis Barragán entabla amistad con Ricardo Legorreta.<br><br>
+                    <a>1964</a>  Inauguración del Museo Nacional de Antropología de Pedro Ramírez Vázquez.<br><br>
+                    <a>1965</a>  Fallece el Dr. Atl en la Ciudad de México.<br><br>
+                    <a>1965</a>  Pedro Ramírez Vázquez gana el concurso para el proyecto del Estadio Azteca.<br><br>
+                    <a>1965</a>  Fallece Le Corbusier en Francia.<br><br>
+                    <a>1965</a>  Luis Barragán entabla amistad con Louis Kahn, a través de correspondencia.<br><br>
+                    <a>1966</a>  Barragán inicia el proyecto de la Cuadra de San Cristóbal y visita el Salk Institute con Louis Kahn.<br><br>
+                    <a>1966</a>  Mathias Goeritz coordina el proyecto de la Ruta de la Amistad.<br><br>
+                    <a>1968</a>  Ricardo Legorreta proyecta el hotel Camino Real con asesoría de Barragán, Chucho Reyes y Mathias Goeritz.<br><br>
+                    <a>1968</a>  Se llevan a cabo los Juegos Olímpicos en México.<br><br>
+                    <a>1968</a>  Se lleva a cabo el movimiento estudiantil en México.<br><br>
+                    <a>1968</a>  Barragán y Goeritz, terminan su amistad debido a la autoría de las Torres de Satélite.<br><br>
+                    <a>1968</a>  Barragán finaliza el proyecto la Cuadra de San Cristóbal y la Casa Egerstrom.<br><br>
+                    <a>1969</a>  Clara Porset y Ramón Torres inauguran la carrera de Diseño Industrial en la UNAM.<br><br>
+                    <a>1969</a>  Inauguración del metro de la Ciudad de México.
+                </p>
+            </section>
+            <section class="footer-decada">
+                <p>1960 - 1969</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-1970" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="1970" class="article-decada">
+            <section class="close-decada">
+                <a id="close-1970">&#x2715;</a>
+            </section>
+            <section class="titulo-decada">
+                <h1>1970</h1>
+            </section>
+            <section class="body-decada">
+                <p><a>1970</a>  Luis Echeverría asume el cargo de presidente en México.<br><br>
+                    <a>1970</a>  Primer Mundial de fútbol en México.<br><br>
+                    <a>1972</a>  Barragán funda junto con otros arquitectos la Sociedad de Arquitectos de Paisaje de México.<br><br>
+                    <a>1973</a>  Se crea el Taller Max Cetto en la Facultad de Arquitectura de la UNAM.<br><br>
+                    <a>1975</a>  Luis Barragán inicia el proyecto de Casa Gilardi.<br><br>
+                    <a>1976</a>  Agustín Hernández  diseña el Heroico Colegio Militar.<br><br>
+                    <a>1976</a>  Emilio Ambasz cura la exposición The Architecture of Luis Barragán en el MoMA de Nueva York.<br><br>
+                    <a>1976</a>  José López Portillo asume el cargo de presidente en México.<br><br>
+                    <a>1976</a>  Fallece Josef Albers en Estados Unidos.<br><br>
+                    <a>1977</a>  Fallece Chucho Reyes en la Ciudad de México.<br><br>
+                    <a>1978</a>  Inauguración del Taller Luis Barragán en la Facultad de Arquitectura de la UNAM.<br><br>
+                    <a>1979</a>  Mathias Goertiz participa junto con otros artistas en el desarrollo del Espacio Escultórico en CU.<br><br>
+                    <a>1979</a> Barragán se asocia con Raúl Ferrera, creando la firma Barragán+Ferrera.
+                </p>
+            </section>
+            <section class="footer-decada">
+                <p>1970 - 1979</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-1980" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="1980" class="article-decada">
+            <section class="close-decada">
+                <a id="close-1980">&#x2715;</a>
+            </section>
+            <section class="titulo-decada">
+                <h1>1980</h1>
+            </section>
+            <section class="body-decada">
+                <p><a>1980</a>  Luis Barragán es galardonado con el Premio Pritzker de Arquitectura.<br><br>
+                    <a>1980</a>  Juan O ‘Gorman adapta la casa de Frida Kahlo en Coyoacán como museo.<br><br> 
+                    <a>1981</a>  Tadao Ando proyecta la Casa Koshino en Japón.<br><br>
+                    <a>1981</a>  Teodoro González de León y Abraham Zabludovsky proyectan el Museo Tamayo en la Ciudad de México.<br><br>
+                    <a>1982</a>  Barragán se retira de la firma Barragán+Ferrera.<br><br>
+                    <a>1982</a>  Fallece Juan O ‘Gorman en la Ciudad de México.<br><br>
+                    <a>1982</a>  Miguel de la Madrid toma el cargo de presidente en México.<br><br>
+                    <a>1985</a>  Inauguración de la exposición Luis Barragán. Arquitecto en el Museo Tamayo.<br><br>
+                    <a>1986</a>  Barragán recibe el Premio Nacional de Arquitectura.<br><br>
+                    <a>1986</a>  Se lleva a cabo el segundo Mundial de Fútbol en México.<br><br>
+                    <a>1986</a>  Barragán padece la enfermedad de Parkinson.<br><br>
+                    <a>1988</a>  Fallece Luis Barragán en la Ciudad de México.<br><br>
+                    <a>1988</a>  La Casa Estudio de Luis Barragán es catalogada como Monumento Artístico por parte del INBA.
+                </p>
+            </section>
+            <section class="footer-decada">
+                <p>1980 - 1989</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-1990" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="1990" class="article-decada">
+            <section class="close-decada">
+                <a id="close-1990">&#x2715;</a>
+            </section>
+            <section class="titulo-decada">
+                <h1>1990</h1>
+            </section>
+            <section class="body-decada">
+                <p><a>1994</a> La Casa Estudio Luis Barragán abre al público como museo de sitio.<br><br>
+                    <a>1998</a> Rem Koolhaas visita la Casa Estudio Luis Barragán.<br><br>
+                    <a>1999</a> Jacques Herzog y Pierre de Meuron visitan la Casa Estudio Luis Barragán.
+                </p>
+            </section>
+            <section class="footer-decada">
+                <p>1990 - 1999</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-2000" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="2000" class="article-decada">
+            <section class="close-decada">
+                <a id="close-2000">&#x2715;</a>
+            </section>
+            <section class="titulo-decada">
+                <h1>2000</h1>
+            </section>
+            <section class="body-decada">
+                <p><a>2000</a>  Tadao Ando, Paulo Mendes da Rocha y Peter Zumthor visitan la Casa Estudio Luis Barragán.<br><br>
+                    <a>2002</a>  Kasuyo Sejima visita la Casa Estudio Luis Barragán.<br><br>
+                    <a>2004</a>  La Casa Luis Barragán es inscrita en la Lista de Patrimonio Mundial de la UNESCO.<br><br>
+                    <a>2005</a>  Toyo Ito visita la Casa Estudio Luis Barragán.<br><br>
+                    <a>2006</a>  Las Casas Cristo y Efraín González son catalogadas como Monumento Artístico por el INBA.<br><br>
+                    <a>2007</a>  La Ciudad Universitaria es inscrita en la Lista de Patrimonio Mundial de la UNESCO.
+                </p>
+            </section>
+            <section class="footer-decada">
+                <p>2000 - 2009</p>
+            </section>
+        </article>
+    </div>
+
+    <div id="draggable-2010" class="ui-widget-content"><!--Div para arrastrar elementos-->
+        <article id="2010" class="article-decada">
+            <section class="close-decada">
+                <a id="close-2010">&#x2715;</a>
+            </section>
+            <section class="titulo-decada">
+                <h1>2010</h1>
+            </section>
+            <section class="body-decada">
+                <p><a>2012</a>  Las Torres de Ciudad Satélite son catalogadas como Monumento Artístico por el INBA.<br><br>
+                    <a>2012</a>  Zaha Hadid y Shigeru Ban visitan la Casa Estudio Luis Barragán.<br><br>
+                    <a>2014</a>  Norman Foster visita la Casa Estudio Luis Barragán.<br><br>
+                    <a>2015</a>  Rafael Moneo visita la Casa Estudio Luis Barragán.<br><br>
+                    <a>2017</a>  Richard Rogers visita la Casa Estudio Luis Barragán.
+                </p>
+            </section>
+            <section class="footer-decada">
+                <p>2010 - 2019</p>
+            </section>
+        </article>
+    </div>
+
+    <!--Timeline---------------------------------------------------------------------------------->
+    <div id="timeline">
+        <nav>
+            <ul>
+                <li><a id="open-1900" class="decada">1900</a></li>
+                <li class="punto"><a>&#x25cf;</a></li>
+                <li><a id="open-1910" class="decada">1910</a></li>
+                <li class="punto"><a>&#x25cf;</a></li>
+                <li><a id="open-1920" class="decada">1920</a></li>
+                <li class="punto"><a>&#x25cf;</a></li>
+                <li><a id="open-1930" class="decada">1930</a></li>
+                <li class="punto"><a>&#x25cf;</a></li>
+                <li><a id="open-1940" class="decada">1940</a></li>
+                <li class="punto"><a>&#x25cf;</a></li>
+                <li><a id="open-1950" class="decada">1950</a></li>
+                <li class="punto"><a>&#x25cf;</a></li>
+                <li><a id="open-1960" class="decada">1960</a></li>
+                <li class="punto"><a>&#x25cf;</a></li>
+                <li><a id="open-1970" class="decada">1970</a></li>
+                <li class="punto"><a>&#x25cf;</a></li>
+                <li><a id="open-1980" class="decada">1980</a></li>
+                <li class="punto"><a>&#x25cf;</a></li>
+                <li><a id="open-1990" class="decada">1990</a></li>
+                <li class="punto"><a>&#x25cf;</a></li>
+                <li><a id="open-2000" class="decada">2000</a></li>
+                <li class="punto"><a>&#x25cf;</a></li>
+                <li><a id="open-2010" class="decada">2010</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--Frooter----------------------------------------------------------------------------------->
+    <div id="footer-main">
+        <a id="copyrights">&copy; 2020 itinerarioBARRAGÁN</a>
+    </div>
+
+    <div id="intro">
+            <img src="images/intro/isometrico-1.gif" alt="">
+            <a id="close-intro">ENTRAR</a>
+    </div>
+
+<script src="js/script.js"></script>
+</body>
+
+</html>
